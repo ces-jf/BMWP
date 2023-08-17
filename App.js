@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 import TopBar from "./src/Components/TopBar";
 
 import { useFonts, Pompiere_400Regular } from '@expo-google-fonts/pompiere';
+import LoadingPage from "./src/Pages/LoadingPage";
+import HomePage from "./src/Pages/HomePage";
 
 
 export default function App() {
@@ -18,7 +20,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <TopBar></TopBar>
+      {/* <LoadingPage></LoadingPage> */}
+      <HomePage></HomePage>
     </View>
   );
 }
