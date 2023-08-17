@@ -13,19 +13,22 @@ export default function BtnTrash() {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   button: {
-    height: 50,
-    width: 50,
-    borderRadius: 100,
+    height: 80,
+    width: 60,
+    borderRadius: 0,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
     backgroundColor: "#F38E8E",
     alignItems: "center",
     alignContent: "center",
     justifyContent: "center",
   },
   buttonImage: {
-    width: 20,
-    height: 20,
+    width: 40,
+    height: 40,
     resizeMode: "contain",
   },
 });

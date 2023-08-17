@@ -2,7 +2,6 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import BtnHome from "../Buttons/home";
 import BtnHelp from "../Buttons/Help";
-import BtnTrash from "../Buttons/Trash";
 
 export default function TopBar() {
     return (
