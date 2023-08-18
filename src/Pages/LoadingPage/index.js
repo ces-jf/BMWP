@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
-import TitlePompiere from "../../Components/Textos/Titulos";
-import SubTitlePompiere from "../../Components/Textos/SubTitles";
+import TitlePompiere from "../../Components/Text/Title";
+import SubTitlePompiere from "../../Components/Text/SubTitles";
 
 export default function LoadingPage() {
   return (
