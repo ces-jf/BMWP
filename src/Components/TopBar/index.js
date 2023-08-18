@@ -2,13 +2,13 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import BtnHome from "../Buttons/home";
 import BtnHelp from "../Buttons/Help";
-import BtnTrash from "../Buttons/Trash";
+import TitlePompiere from "../Textos/Titulos";
 
 export default function TopBar() {
     return (
         <View style={styles.container}>
             <BtnHome></BtnHome>
-            <Text style={styles.text}>BMWP & ASPT</Text>
+            <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
             <BtnHelp></BtnHelp>
         </View>
     );
