@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View } from "react-native";
 import TopBar from "../../Components/TopBar";
 import BtnNavigate from "../../Components/Buttons/Navigate";
 
