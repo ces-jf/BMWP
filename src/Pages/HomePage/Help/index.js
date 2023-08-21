@@ -1,9 +1,11 @@
 import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 import TopBar from "../../../Components/TopBar";
-import BtnNavigate from "../../../Components/Buttons/Navigate";
 import BtnBack from "../../../Components/Buttons/Back";
 import TitlePompiere from "../../../Components/Text/Title";
+import SubTitlePompiere from "../../../Components/Text/SubTitles";
+import LocationPlate from "../../../Components/LocationPlate";
+import Span from "../../../Components/Span"
 
 export default function HelpHomePage() {
   return (
@@ -11,12 +13,12 @@ export default function HelpHomePage() {
       <TopBar>
         <BtnBack></BtnBack>
         <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
-        <span></span>
-        <span></span>
+        <Span></Span>
       </TopBar>
       <View>
-        <BtnNavigate text={"Referência Bibliográfica"}></BtnNavigate>
-        <Text>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx</Text>
+        <LocationPlate text={"Referência Bibliográfica"}></LocationPlate>
+        <SubTitlePompiere text={"Xxxx"} fontSize={30}></SubTitlePompiere>
+        <Text style={styles.text}>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx</Text>
       </View>
     </View>
   );
@@ -31,5 +33,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     height: "100%",
     width: "100%",
-  },
+    margin:0,
+  },text :{
+    width:"85%",
+    alignContent:"center",
+    alignItems:"center",
+    justifyContent:"center",
+    margin:"auto"
+  }
 });

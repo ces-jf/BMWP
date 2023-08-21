@@ -1,7 +1,8 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import TitlePompiere from "../../Components/Text/Title";
 import SubTitlePompiere from "../../Components/Text/SubTitles";
+import { StatusBar } from "expo-status-bar";
 
 export default function LoadingPage() {
   return (
@@ -20,6 +21,8 @@ export default function LoadingPage() {
         ></SubTitlePompiere>
         <SubTitlePompiere text={"Average Score per Taxon"}></SubTitlePompiere>
       </View>
+
+      <StatusBar style="inverted"></StatusBar>
     </View>
   );
 }
@@ -47,5 +50,8 @@ const styles = StyleSheet.create({
     fontSize: 13,
     textTransform: "capitalize",
     color: "#909090",
-  },
+  },logo :{
+    width: 175,
+    height: 275
+  }
 });

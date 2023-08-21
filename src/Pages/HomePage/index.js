@@ -2,11 +2,18 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import TopBar from "../../Components/TopBar";
 import BtnNavigate from "../../Components/Buttons/Navigate";
+import BtnHome from "../../Components/Buttons/home";
+import TitlePompiere from "../../Components/Text/Title";
+import BtnHelp from "../../Components/Buttons/Help";
 
 export default function HomePage() {
   return (
     <View style={styles.container}>
-      <TopBar></TopBar>
+      <TopBar>
+        <BtnHome></BtnHome>
+        <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
+        <BtnHelp></BtnHelp>
+      </TopBar>
       <View>
         <BtnNavigate text={"Armitage et al. – 1983"}></BtnNavigate>
         <BtnNavigate text={"Junqueira & Campos - 1998"}></BtnNavigate>

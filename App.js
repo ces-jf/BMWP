@@ -22,6 +22,7 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       {/* <LoadingPage></LoadingPage> */}
+      {/* <HomePage></HomePage> */}
       <HelpHomePage></HelpHomePage>
     </View>
   );
