@@ -6,6 +6,8 @@ import { useFonts, Pompiere_400Regular } from "@expo-google-fonts/pompiere";
 
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from 'expo-blur';
+import * as ScreenOrientation from 'expo-screen-orientation';
+
 
 import LoadingPage from "./src/Pages/LoadingPage";
 import HomePage from "./src/Pages/HomePage";
@@ -63,6 +65,9 @@ function MyTabs() {
 }
 
 export default function App() {
+
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.DEFAULT );
+
   let [fontsLoaded, fontError] = useFonts({
     Pompiere_400Regular,
   });
