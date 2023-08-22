@@ -6,6 +6,7 @@ import TitlePompiere from "../../../Components/Text/Title";
 import SubTitlePompiere from "../../../Components/Text/SubTitles";
 import LocationPlate from "../../../Components/LocationPlate";
 import Span from "../../../Components/Span"
+import { StatusBar } from "expo-status-bar";
 
 export default function HelpHomePage() {
   return (

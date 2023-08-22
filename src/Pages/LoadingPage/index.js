@@ -21,8 +21,6 @@ export default function LoadingPage() {
         ></SubTitlePompiere>
         <SubTitlePompiere text={"Average Score per Taxon"}></SubTitlePompiere>
       </View>
-
-      <StatusBar style="inverted"></StatusBar>
     </View>
   );
 }
