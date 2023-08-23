@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import TopBar from "../../Components/TopBar";
 import BtnNavigate from "../../Components/Buttons/Navigate";
 import BtnHome from "../../Components/Buttons/home";
@@ -14,12 +14,15 @@ export default function HomePage() {
         <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
         <BtnHelp></BtnHelp>
       </TopBar>
-      <View>
+
+      <ScrollView>
+
         <BtnNavigate text={"Armitage et al. – 1983"}></BtnNavigate>
         <BtnNavigate text={"Junqueira & Campos - 1998"}></BtnNavigate>
         <BtnNavigate text={"Junqueira et al. – 2000"}></BtnNavigate>
         <BtnNavigate text={"Junqueira et al. – 2018"}></BtnNavigate>
-      </View>
+
+      </ScrollView>
     </View>
   );
 }
@@ -28,10 +31,12 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "flex-start",
     alignContent: "center",
-    backgroundColor: "#fff",
+    justifyContent: "flex-start",
+
     height: "100%",
     width: "100%",
+
+    backgroundColor: "#fff",
   },
 });

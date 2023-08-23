@@ -5,9 +5,8 @@ import { StyleSheet, Text, View } from "react-native";
 import { useFonts, Pompiere_400Regular } from "@expo-google-fonts/pompiere";
 
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { BlurView } from 'expo-blur';
-import * as ScreenOrientation from 'expo-screen-orientation';
-
+import { BlurView } from "expo-blur";
+import * as ScreenOrientation from "expo-screen-orientation";
 
 import LoadingPage from "./src/Pages/LoadingPage";
 import HomePage from "./src/Pages/HomePage";
@@ -20,7 +19,7 @@ function MyTabs() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarStyle: { position: "absolute", height: 50, },
+        tabBarStyle: styles.tabBar,
         tabBarBackground: () => (
           <BlurView
             tint="default"
@@ -55,6 +54,7 @@ function MyTabs() {
         component={HelpHomePage}
         options={{
           tabBarLabel: "Ajuda",
+          tabBarLabelStyle: "#",
           tabBarIcon: ({}) => (
             <MaterialCommunityIcons name="help" color={"#999"} size={30} />
           ),
@@ -65,8 +65,7 @@ function MyTabs() {
 }
 
 export default function App() {
-
-  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.DEFAULT );
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.DEFAULT);
 
   let [fontsLoaded, fontError] = useFonts({
     Pompiere_400Regular,
@@ -83,30 +82,17 @@ export default function App() {
   );
 }
 
-// export default function App() {
-
-//   let [fontsLoaded, fontError] = useFonts({
-//     Pompiere_400Regular
-//   });
-
-//   if (!fontsLoaded && !fontError) {
-//     return null;
-//   }
-
-//   return (
-//     <View style={styles.container}>
-//       <StatusBar style="auto" />
-//       {/* <LoadingPage></LoadingPage> */}
-//       {/* <HomePage></HomePage> */}
-//       <HelpHomePage></HelpHomePage>
-//     </View>
-//   );
-// }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
     marginTop: 30,
+  },
+  tabBar: {
+    width: "100%",
+    height: "8%",
+  },
+  itensTabBar: {
+    backgroundColor: "#9999",
   },
 });
