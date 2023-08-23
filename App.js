@@ -22,11 +22,12 @@ function MyTabs() {
         tabBarStyle: styles.tabBar,
         tabBarBackground: () => (
           <BlurView
-            tint="default"
-            intensity={100}
+            tint="dark"
+            intensity={40}
             style={StyleSheet.absoluteFill}
           />
         ),
+        tabBarLabelStyle:{ color : "#fff", display:"none"},
       }}
     >
       <Tab.Screen
@@ -35,7 +36,7 @@ function MyTabs() {
         options={{
           tabBarLabel: "Loading",
           tabBarIcon: ({}) => (
-            <MaterialCommunityIcons name="timer" color={"#999"} size={30} />
+            <MaterialCommunityIcons name="timer" color={"#fff"} size={30} />
           ),
         }}
       />
@@ -45,7 +46,7 @@ function MyTabs() {
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({}) => (
-            <MaterialCommunityIcons name="home" color={"#999"} size={30} />
+            <MaterialCommunityIcons name="home" color={"#fff"} size={30} />
           ),
         }}
       />
@@ -54,10 +55,10 @@ function MyTabs() {
         component={HelpHomePage}
         options={{
           tabBarLabel: "Ajuda",
-          tabBarLabelStyle: "#",
           tabBarIcon: ({}) => (
-            <MaterialCommunityIcons name="help" color={"#999"} size={30} />
+            <MaterialCommunityIcons name="help" color={"#fff"} size={30} />
           ),
+          
         }}
       />
     </Tab.Navigator>
@@ -91,8 +92,7 @@ const styles = StyleSheet.create({
   tabBar: {
     width: "100%",
     height: "8%",
-  },
-  itensTabBar: {
-    backgroundColor: "#9999",
+
+    color:"#fff",
   },
 });

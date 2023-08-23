@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, View, Image } from "react-native";
+
 import TitlePompiere from "../../Components/Text/Title";
 import SubTitlePompiere from "../../Components/Text/SubTitles";
-import { StatusBar } from "expo-status-bar";
 
 export default function LoadingPage() {
   return (
