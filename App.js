@@ -6,6 +6,7 @@ import { useFonts, Pompiere_400Regular } from '@expo-google-fonts/pompiere';
 import LoadingPage from "./src/Pages/LoadingPage";
 import HomePage from "./src/Pages/HomePage";
 import HelpHomePage from "./src/Pages/HomePage/Help";
+import ScorePage from "./src/Pages/ScorePage";
 
 
 export default function App() {
@@ -23,7 +24,8 @@ export default function App() {
       <StatusBar style="auto" />
       {/* <LoadingPage></LoadingPage> */}
       {/* <HomePage></HomePage> */}
-      <HelpHomePage></HelpHomePage>
+      {/* <HelpHomePage></HelpHomePage> */}
+      <ScorePage></ScorePage>
     </View>
   );
 }
