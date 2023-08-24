@@ -21,8 +21,25 @@ export default function HelpHomePage() {
       <LocationPlate text={"Referência Bibliográfica"}></LocationPlate>
 
       <ScrollView style={styles.scroll} >
+        
+        <SubTitlePompiere text={"Mazilão, Gabriel"} fontSize={30}></SubTitlePompiere>
+        <Text style={styles.text}>Mazilão, G.(2023). Livro: Como ter um bigode de respeito. Estudante de Engenharia bigodal, traz os segredos de um bigode perfeito</Text>
+        
+        <Span></Span>
+
+        <SubTitlePompiere text={"Meireles, Jhonathan"} fontSize={30}></SubTitlePompiere>
+        <Text style={styles.text}>Jhonathan, M.(2023). Livro: faturando Bitcoin, aprenda com o sheik que conquistou seu primeiro trilhão de dollares em 7 minutos</Text>
+
+        <Span></Span>
+
+        <SubTitlePompiere text={"Monteiro, Gabriel"} fontSize={30}></SubTitlePompiere>
+        <Text style={styles.text}>Monteiro, G.(2023). Livro: O goleiro que nunca tomou gol. Descubra o segredo da cadeira de massagem</Text>
+
+        <Span></Span>
+
         <SubTitlePompiere text={"Sobreira, Gustavo"} fontSize={30}></SubTitlePompiere>
         <Text style={styles.text}>Sobreira, G. P. (2023). Livro: Tavares talentoso, trabalhando trouxe tomate, trigo, talheres, teve também tinto tanto tomou, tivera todo tonto</Text>
+
       </ScrollView>
 
     </View>

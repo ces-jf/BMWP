@@ -16,67 +16,67 @@ import { StatusBar } from "expo-status-bar";
 
 import ScorePage from "./src/Pages/ScorePage";
 
-
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
-    <Tab.Navigator
-      screenOptions={{
-        tabBarStyle: styles.tabBar,
-        tabBarBackground: () => (
-          <BlurView
-            tint="dark"
-            intensity={40}
-            style={StyleSheet.absoluteFill}
-          />
-        ),
-        tabBarLabelStyle:{ color : "#fff", display:"none"},
-      }}
-    >
-      <Tab.Screen
-        name="LoadingPage"
-        component={LoadingPage}
-        options={{
-          tabBarLabel: "Loading",
-          tabBarIcon: ({}) => (
-            <MaterialCommunityIcons name="timer" color={"#fff"} size={30} />
+    <View style={styles.container}>
+      <Tab.Navigator
+        screenOptions={{
+          headerShown: false,
+          tabBarStyle: styles.tabBar,
+          tabBarBackground: () => (
+            <BlurView
+              tint="dark"
+              intensity={40}
+              style={StyleSheet.absoluteFill}
+            />
           ),
+          tabBarLabelStyle: { color: "#fff", display: "none" },
         }}
-      />
-      <Tab.Screen
-        name="HomePage"
-        component={HomePage}
-        options={{
-          tabBarLabel: "Home",
-          tabBarIcon: ({}) => (
-            <MaterialCommunityIcons name="home" color={"#fff"} size={30} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="HelpPage"
-        component={HelpHomePage}
-        options={{
-          tabBarLabel: "Ajuda",
-          tabBarIcon: ({}) => (
-            <MaterialCommunityIcons name="help" color={"#fff"} size={30} />
-          ),
-          
-        }}
-      />
-      <Tab.Screen
-        name="ScorePage"
-        component={ScorePage}
-        options={{
-          tabBarLabel: "Score",
-          tabBarIcon: ({}) => (
-            <MaterialCommunityIcons name="counter" color={"#fff"} size={30} />
-          ),
-          
-        }}
-      />
-    </Tab.Navigator>
+      >
+        <Tab.Screen
+          name="LoadingPage"
+          component={LoadingPage}
+          options={{
+            tabBarLabel: "Loading",
+            tabBarIcon: ({}) => (
+              <MaterialCommunityIcons name="timer" color={"#fff"} size={30} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="HomePage"
+          component={HomePage}
+          options={{
+            tabBarLabel: "Home",
+            tabBarIcon: ({}) => (
+              <MaterialCommunityIcons name="home" color={"#fff"} size={30} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="HelpPage"
+          component={HelpHomePage}
+          options={{
+            tabBarLabel: "Ajuda",
+            tabBarIcon: ({}) => (
+              <MaterialCommunityIcons name="help" color={"#fff"} size={30} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="ScorePage"
+          component={ScorePage}
+          options={{
+            tabBarLabel: "Score",
+            tabBarIcon: ({}) => (
+              <MaterialCommunityIcons name="counter" color={"#fff"} size={30} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    </View>
   );
 }
 
@@ -91,7 +91,6 @@ export default function App() {
     return null;
   }
   return (
-
     <NavigationContainer>
       <MyTabs></MyTabs>
       <StatusBar style="auto"></StatusBar>
@@ -102,13 +101,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     marginTop: 30,
   },
   tabBar: {
     width: "100%",
     height: "8%",
 
-    color:"#fff",
+    color: "#fff",
   },
 });
