@@ -12,8 +12,8 @@ export default function TitlePompiere({text, color}) {
 const styles = StyleSheet.create({
   title: {
     textAlign:"center",
+    textTransform: "uppercase",
     fontFamily: "Pompiere_400Regular",
     fontSize: 34,
-    textTransform: "uppercase",
   },
 });

@@ -1,8 +1,6 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
-import BtnHome from "../Buttons/home";
-import BtnHelp from "../Buttons/Help";
-import TitlePompiere from "../Text/Title";
+import { StyleSheet, View } from "react-native";
+
 
 export default function TopBar({children}) {
     return (
