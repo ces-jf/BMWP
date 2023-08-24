@@ -11,7 +11,11 @@ import * as ScreenOrientation from "expo-screen-orientation";
 import LoadingPage from "./src/Pages/LoadingPage";
 import HomePage from "./src/Pages/HomePage";
 import HelpHomePage from "./src/Pages/HomePage/Help";
+
 import { StatusBar } from "expo-status-bar";
+
+import ScorePage from "./src/Pages/ScorePage";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -76,6 +80,7 @@ export default function App() {
     return null;
   }
   return (
+
     <NavigationContainer>
       <MyTabs></MyTabs>
       <StatusBar style="auto"></StatusBar>
