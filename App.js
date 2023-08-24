@@ -65,6 +65,17 @@ function MyTabs() {
           
         }}
       />
+      <Tab.Screen
+        name="ScorePage"
+        component={ScorePage}
+        options={{
+          tabBarLabel: "Score",
+          tabBarIcon: ({}) => (
+            <MaterialCommunityIcons name="counter" color={"#fff"} size={30} />
+          ),
+          
+        }}
+      />
     </Tab.Navigator>
   );
 }
