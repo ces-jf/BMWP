@@ -6,6 +6,8 @@ import BtnHelp from "../../Components/Buttons/Help";
 import BtnBack from "../../Components/Buttons/Back";
 import LocationPlate from "../../Components/LocationPlate";
 import BtnTrash from "../../Components/Buttons/Trash";
+import ParameterRuler from "../../Components/ParameterRuler/ParameterRuler";
+import SubTitlePompiere from "../../Components/Text/SubTitles";
 
 export default function ScorePage() {
     return (
@@ -23,6 +25,12 @@ export default function ScorePage() {
                     <BtnTrash></BtnTrash>
                 </View>
             </View>
+            <View style={styles.containerScore}>
+                <SubTitlePompiere color={"#000"} fontSize={30} text={"Score Total: 135"}></SubTitlePompiere>
+                <ParameterRuler></ParameterRuler>
+
+            </View>
+
         </View>
     );
 }
@@ -49,4 +57,15 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginTop: 20,
     },
+    containerScore: {
+        margin: 20,
+        backgroundColor: 'white',
+        borderRadius: 10,
+        height: "15%",
+        elevation: 5,
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 5,
+    }
 });
