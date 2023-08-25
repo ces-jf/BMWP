@@ -1,14 +1,14 @@
 import React from "react";
 import { StyleSheet, View, Text, ScrollView } from "react-native";
 
-import Span from "../../../Components/Span"
-import TopBar from "../../../Components/TopBar";
-import BtnBack from "../../../Components/Buttons/Back";
-import TitlePompiere from "../../../Components/Text/Title";
-import LocationPlate from "../../../Components/LocationPlate";
-import SubTitlePompiere from "../../../Components/Text/SubTitles";
+import Span from "../../Components/Span"
+import TopBar from "../../Components/TopBar";
+import BtnBack from "../../Components/Buttons/Back";
+import TitlePompiere from "../../Components/Text/Title";
+import LocationPlate from "../../Components/LocationPlate";
+import SubTitlePompiere from "../../Components/Text/SubTitles";
 
-export default function HelpHomePage() {
+export default function HelpPage() {
   return (
     <View style={styles.container}>
 

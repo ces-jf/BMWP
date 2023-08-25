@@ -2,15 +2,15 @@ import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import TopBar from "../../Components/TopBar";
 import BtnNavigate from "../../Components/Buttons/Navigate";
-import BtnHome from "../../Components/Buttons/home";
-import TitlePompiere from "../../Components/Text/Title";
 import BtnHelp from "../../Components/Buttons/Help";
+import Span from "../../Components/Span"
+import TitlePompiere from "../../Components/Text/Title";
 
 export default function HomePage() {
   return (
     <View style={styles.container}>
       <TopBar>
-        <BtnHome></BtnHome>
+        <Span></Span>
         <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
         <BtnHelp></BtnHelp>
       </TopBar>

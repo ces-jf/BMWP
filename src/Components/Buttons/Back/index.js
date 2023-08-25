@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { View, Image, TouchableOpacity, StyleSheet } from "react-native";
 
-export default function BtnBack() {
+export default function BtnBack({pageBack}) {
+
+  const navigate = useNavigation();
+  function backPage(){
+    navigate.goBack()
+  }
   return (
     <View>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={backPage}>
       <Image
           source={require('../../../../assets/Arrow.png')}
           style={styles.buttonImage}

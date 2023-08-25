@@ -1,12 +1,20 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { View, Image, TouchableOpacity, StyleSheet } from "react-native";
 
+
 export default function BtnHelp() {
+  
+  const navigation = useNavigation();
+  function goToHelpPage() {
+    navigation.navigate("HelpPage");
+  }
+
   return (
     <View>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
-      <Image
-          source={require('../../../../assets/Help.png')}
+      <TouchableOpacity style={styles.button} onPress={goToHelpPage}>
+        <Image
+          source={require("../../../../assets/Help.png")}
           style={styles.buttonImage}
         />
       </TouchableOpacity>
