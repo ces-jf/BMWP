@@ -22,10 +22,11 @@ export default function BtnHome() {
 }
 const styles = StyleSheet.create({
   button: {
-    height: 50,
-    width: 50,
+    height: 45,
+    width: 45,
     borderRadius: 100,
     backgroundColor: "#fff",
+    
     alignItems: "center",
     alignContent: "center",
     justifyContent: "center",

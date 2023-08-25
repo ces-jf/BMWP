@@ -3,9 +3,9 @@ import SubTitlePompiere from "../../Text/SubTitles";
 import { useNavigation } from "@react-navigation/native";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-
 export default function BtnNavigate({text, action}) {
 
+  //TODO[] adicionar pagians conforme for passado 
   const navigate = useNavigation()
   function goScore(){
     navigate.navigate("ScorePage")
@@ -22,15 +22,15 @@ export default function BtnNavigate({text, action}) {
 const styles = StyleSheet.create({
   container:{
     
-    marginTop: 20,
-    marginBottom: 20,
+    marginTop: 15,
+    marginBottom:15,
     marginLeft:30,
     marginRight:30,
     
-    padding:10,
+    padding:20,
 
-    alignContent:"center",
     alignItems:"center",
+    alignContent:"center",
     justifyContent:"center",
     
     borderRadius: 10,

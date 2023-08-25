@@ -12,12 +12,15 @@ export default function TopBar({children}) {
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: "row",
         alignItems: "center",
+        alignContent:"center",
+        flexDirection: "row",
         justifyContent: "space-around",
-        backgroundColor: "#0972AD",
+
         height: 60,
         width: "100%",
+        
+        backgroundColor: "#0972AD",
     },
     text: {
         fontFamily: "Pompiere_400Regular",

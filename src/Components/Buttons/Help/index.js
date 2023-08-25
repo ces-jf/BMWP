@@ -2,9 +2,7 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { View, Image, TouchableOpacity, StyleSheet } from "react-native";
 
-
 export default function BtnHelp() {
-  
   const navigation = useNavigation();
   function goToHelpPage() {
     navigation.navigate("HelpPage");
@@ -23,10 +21,11 @@ export default function BtnHelp() {
 }
 const styles = StyleSheet.create({
   button: {
-    height: 50,
-    width: 50,
+    width: 45,
+    height: 45,
     borderRadius: 100,
     backgroundColor: "#fff",
+    
     alignItems: "center",
     alignContent: "center",
     justifyContent: "center",

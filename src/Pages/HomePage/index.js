@@ -1,10 +1,11 @@
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
-import TopBar from "../../Components/TopBar";
-import BtnNavigate from "../../Components/Buttons/Navigate";
+
 import BtnHelp from "../../Components/Buttons/Help";
-import Span from "../../Components/Span"
+import BtnNavigate from "../../Components/Buttons/Navigate";
 import TitlePompiere from "../../Components/Text/Title";
+import TopBar from "../../Components/TopBar";
+import Span from "../../Components/Span"
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
 
       <ScrollView>
 
+        <Span></Span>
         <BtnNavigate text={"Armitage et al. – 1983"}></BtnNavigate>
         <BtnNavigate text={"Junqueira & Campos - 1998"}></BtnNavigate>
         <BtnNavigate text={"Junqueira et al. – 2000"}></BtnNavigate>
@@ -29,14 +31,13 @@ export default function HomePage() {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "column",
     alignItems: "center",
     alignContent: "center",
-    justifyContent: "flex-start",
+    flexDirection: "column",
 
     height: "100%",
     width: "100%",
 
     backgroundColor: "#fff",
-  },
+  }
 });
