@@ -12,6 +12,7 @@ import { useFonts, Pompiere_400Regular } from "@expo-google-fonts/pompiere";
 import HelpPage from "./src/Pages/HelpPage";
 import HomePage from "./src/Pages/HomePage";
 import LoadingPage from "./src/Pages/LoadingPage";
+import RegisterPage from "./src/Pages/RegisterPage"
 import ScorePage from "./src/Pages/ScorePage";
 
 //Navegação de telas, a partir dos botões
@@ -20,6 +21,7 @@ function MyStack() {
   return (
     <View style={styles.container}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="RegisterPage" component={RegisterPage}/>
         <Stack.Screen name="HomePage" component={HomePage} />
         <Stack.Screen name="ScorePage" component={ScorePage} />
         <Stack.Screen name="LoadingPage" component={LoadingPage} />
