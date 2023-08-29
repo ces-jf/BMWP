@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SafeAreaView, Text, TextInput } from "react-native";
+import { StyleSheet, SafeAreaView, Text, TextInput } from "react-native";
 
 export default TextInputExample = ({
   value,
@@ -9,7 +9,7 @@ export default TextInputExample = ({
   textForLabel,
 }) => {
   const [text, onChangeText] = useState(`${value}`);
-  const [color, changeColor] = useState("#F38E8E");
+  const [color, changeColor] = useState("#rgba(243, 142, 142, 0.18)");
 
   const mudarCor = () => {
     if (text !== value) {
@@ -19,16 +19,19 @@ export default TextInputExample = ({
 
   return (
     <SafeAreaView>
-      <Text>{textForLabel}</Text>
+      <Text style={styles.label}>{textForLabel}</Text>
       <TextInput
-        style={{
-          marginBottom: marginBot,
-          minWidth: "100%",
-          height: 40,
-          padding: 10,
-          borderRadius: 10,
-          backgroundColor: color,
-        }}
+        style={[
+          styles.input,
+          {
+            marginBottom: marginBot,
+            minWidth: "100%",
+            height: 50,
+            padding: 10,
+            borderRadius: 10,
+            backgroundColor: color,
+          },
+        ]}
         value={text}
         placeholder={placeholder}
         onChangeText={onChangeText}
@@ -38,3 +41,20 @@ export default TextInputExample = ({
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  label: {
+    fontSize: 24,
+    fontFamily: "Poppins_500Medium",
+
+    color: "#000",
+    textTransform: "capitalize",
+  },
+  input: {
+    fontSize:15,
+    fontFamily: "Poppins_500Medium",
+
+    color: "#000",
+    textTransform: "capitalize",
+  },
+});

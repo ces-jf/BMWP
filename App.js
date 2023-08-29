@@ -6,7 +6,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 //Expo
 import { StatusBar } from "expo-status-bar";
 import * as ScreenOrientation from "expo-screen-orientation";
-import { useFonts, Pompiere_400Regular } from "@expo-google-fonts/pompiere";
+
+import { useFonts } from "expo-font";
+import { Pompiere_400Regular } from "@expo-google-fonts/pompiere";
+import { Poppins_100Thin,Poppins_500Medium } from "@expo-google-fonts/poppins";
 
 //Local
 import HelpPage from "./src/Pages/HelpPage";
@@ -21,8 +24,8 @@ function MyStack() {
   return (
     <View style={styles.container}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="RegisterPage" component={RegisterPage}/>
         <Stack.Screen name="HomePage" component={HomePage} />
+        <Stack.Screen name="RegisterPage" component={RegisterPage}/>
         <Stack.Screen name="ScorePage" component={ScorePage} />
         <Stack.Screen name="LoadingPage" component={LoadingPage} />
         <Stack.Screen name="HelpPage" component={HelpPage} />
@@ -37,6 +40,9 @@ export default function App() {
 
   let [fontsLoaded, fontError] = useFonts({
     Pompiere_400Regular,
+    Poppins_100Thin,
+    Poppins_500Medium
+    
   });
 
   if (!fontsLoaded && !fontError) {
