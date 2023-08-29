@@ -1,84 +1,34 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+//React
+import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { StyleSheet, Text, View } from "react-native";
+import { createStackNavigator } from "@react-navigation/stack";
 
+//Expo
+import { StatusBar } from "expo-status-bar";
+import * as ScreenOrientation from "expo-screen-orientation";
 import { useFonts, Pompiere_400Regular } from "@expo-google-fonts/pompiere";
 
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { BlurView } from "expo-blur";
-import * as ScreenOrientation from "expo-screen-orientation";
-
-import LoadingPage from "./src/Pages/LoadingPage";
+//Local
+import HelpPage from "./src/Pages/HelpPage";
 import HomePage from "./src/Pages/HomePage";
-import HelpHomePage from "./src/Pages/HomePage/Help";
-
-import { StatusBar } from "expo-status-bar";
-
+import LoadingPage from "./src/Pages/LoadingPage";
 import ScorePage from "./src/Pages/ScorePage";
 
-const Tab = createBottomTabNavigator();
-
-function MyTabs() {
+//Navegação de telas, a partir dos botões
+const Stack = createStackNavigator();
+function MyStack() {
   return (
     <View style={styles.container}>
-      <Tab.Navigator
-        screenOptions={{
-          headerShown: false,
-          tabBarStyle: styles.tabBar,
-          tabBarBackground: () => (
-            <BlurView
-              tint="dark"
-              intensity={40}
-              style={StyleSheet.absoluteFill}
-            />
-          ),
-          tabBarLabelStyle: { color: "#fff", display: "none" },
-        }}
-      >
-        <Tab.Screen
-          name="LoadingPage"
-          component={LoadingPage}
-          options={{
-            tabBarLabel: "Loading",
-            tabBarIcon: ({}) => (
-              <MaterialCommunityIcons name="timer" color={"#fff"} size={30} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="HomePage"
-          component={HomePage}
-          options={{
-            tabBarLabel: "Home",
-            tabBarIcon: ({}) => (
-              <MaterialCommunityIcons name="home" color={"#fff"} size={30} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="HelpPage"
-          component={HelpHomePage}
-          options={{
-            tabBarLabel: "Ajuda",
-            tabBarIcon: ({}) => (
-              <MaterialCommunityIcons name="help" color={"#fff"} size={30} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="ScorePage"
-          component={ScorePage}
-          options={{
-            tabBarLabel: "Score",
-            tabBarIcon: ({}) => (
-              <MaterialCommunityIcons name="counter" color={"#fff"} size={30} />
-            ),
-          }}
-        />
-      </Tab.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="HomePage" component={HomePage} />
+        <Stack.Screen name="ScorePage" component={ScorePage} />
+        <Stack.Screen name="LoadingPage" component={LoadingPage} />
+        <Stack.Screen name="HelpPage" component={HelpPage} />
+      </Stack.Navigator>
     </View>
   );
 }
+
 
 export default function App() {
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.DEFAULT);
@@ -92,7 +42,7 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <MyTabs></MyTabs>
+      <MyStack></MyStack>
       <StatusBar style="auto"></StatusBar>
     </NavigationContainer>
   );
@@ -102,11 +52,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 30,
-  },
-  tabBar: {
-    width: "100%",
-    height: "8%",
-
-    color: "#fff",
-  },
+  }
 });

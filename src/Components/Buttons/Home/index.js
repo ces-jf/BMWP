@@ -1,10 +1,17 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { View, Image, TouchableOpacity, StyleSheet } from "react-native";
 
 export default function BtnHome() {
+
+  const navigation = useNavigation();
+  function goToHomePage(){
+    navigation.navigate("HomePage")
+  }
+
   return (
     <View>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={goToHomePage}>
       <Image
           source={require('../../../../assets/Home.png')}
           style={styles.buttonImage}
@@ -15,10 +22,11 @@ export default function BtnHome() {
 }
 const styles = StyleSheet.create({
   button: {
-    height: 50,
-    width: 50,
+    height: 45,
+    width: 45,
     borderRadius: 100,
     backgroundColor: "#fff",
+    
     alignItems: "center",
     alignContent: "center",
     justifyContent: "center",
