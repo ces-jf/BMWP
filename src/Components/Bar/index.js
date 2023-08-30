@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 
 
-export default function TopBar({children}) {
+export default function Bar({children}) {
     return (
         <View style={styles.container}>
             {children}

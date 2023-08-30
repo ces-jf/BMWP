@@ -2,19 +2,21 @@ import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 
 import BtnHelp from "../../Components/Buttons/Help";
+import BtnBack from "../../Components/Buttons/Back";
+import BtnGo from "../../Components/Buttons/Go";
 import BtnNavigate from "../../Components/Buttons/Navigate";
 import TitlePompiere from "../../Components/Text/Title";
-import TopBar from "../../Components/TopBar";
+import Bar from "../../Components/Bar";
 import Span from "../../Components/Span"
 
-export default function HomePage() {
+export default function ChangeBMWP() {
   return (
     <View style={styles.container}>
-      <TopBar>
+      <Bar>
         <Span></Span>
         <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
         <BtnHelp></BtnHelp>
-      </TopBar>
+      </Bar>
 
       <ScrollView>
 
@@ -25,6 +27,14 @@ export default function HomePage() {
         <BtnNavigate text={"Junqueira et al. – 2018"}></BtnNavigate>
 
       </ScrollView>
+
+      <Bar>
+        <BtnBack></BtnBack>
+
+        <Span></Span>
+        <Span></Span>
+        <Span></Span>
+      </Bar>
     </View>
   );
 }

@@ -8,7 +8,7 @@ export default function BtnNavigate({text, action}) {
   //TODO[] adicionar pagians conforme for passado 
   const navigate = useNavigation()
   function goScore(){
-    navigate.navigate("RegisterPage")
+    navigate.navigate("ScorePage")
   }
   return (
     <View style={styles.container}>

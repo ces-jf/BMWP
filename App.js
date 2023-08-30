@@ -13,7 +13,7 @@ import { Poppins_100Thin,Poppins_500Medium } from "@expo-google-fonts/poppins";
 
 //Local
 import HelpPage from "./src/Pages/HelpPage";
-import HomePage from "./src/Pages/HomePage";
+import ChangeBMWP from "./src/Pages/ChangeBMWP";
 import LoadingPage from "./src/Pages/LoadingPage";
 import RegisterPage from "./src/Pages/RegisterPage"
 import ScorePage from "./src/Pages/ScorePage";
@@ -24,8 +24,8 @@ function MyStack() {
   return (
     <View style={styles.container}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="HomePage" component={HomePage} />
         <Stack.Screen name="RegisterPage" component={RegisterPage}/>
+        <Stack.Screen name="ChangeBMWP" component={ChangeBMWP} />
         <Stack.Screen name="ScorePage" component={ScorePage} />
         <Stack.Screen name="LoadingPage" component={LoadingPage} />
         <Stack.Screen name="HelpPage" component={HelpPage} />

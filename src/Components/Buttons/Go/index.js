@@ -2,18 +2,17 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { View, Image, TouchableOpacity, StyleSheet } from "react-native";
 
-export default function BtnHome() {
+export default function BtnGo({pageGo}) {
 
-  const navigation = useNavigation();
-  function goToHomePage(){
-    navigation.navigate("RegisterPage")
+  const navigate = useNavigation();
+  function backPage(){
+    navigate.navigate(pageGo)
   }
-
   return (
     <View>
-      <TouchableOpacity style={styles.button} onPress={goToHomePage}>
+      <TouchableOpacity style={styles.button} onPress={backPage}>
       <Image
-          source={require('../../../../assets/Home.png')}
+          source={require('../../../../assets/Arrow.png')}
           style={styles.buttonImage}
         />
       </TouchableOpacity>
@@ -26,14 +25,15 @@ const styles = StyleSheet.create({
     width: 45,
     borderRadius: 100,
     backgroundColor: "#fff",
-    
+
     alignItems: "center",
     alignContent: "center",
     justifyContent: "center",
+    transform: [{ rotate: '180deg'}]
   },
   buttonImage: {
     width: 20,
     height: 20,
-    resizeMode: "contain",
+    resizeMode: "contain"
   },
 });

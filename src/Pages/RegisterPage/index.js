@@ -7,15 +7,16 @@ import {
   View,
   Image,
   TouchableOpacity,
-  Animated,
+  Text,
 } from "react-native";
 
 import BtnHelp from "../../Components/Buttons/Help";
 import TitlePompiere from "../../Components/Text/Title";
-import TopBar from "../../Components/TopBar";
-import BtnHome from "../../Components/Buttons/Home";
+import Bar from "../../Components/Bar";
+import Span from "../../Components/Span";
+import BtnGo from "../../Components/Buttons/Go";
 import LocationPlate from "../../Components/LocationPlate";
-import TextInputExample from "./Input";
+import TextInputExample from "../../Components/Input";
 
 export default function RegisterPage() {
   const [coletores, setColetores] = useState([]); // Estado para armazenar os coletores
@@ -25,66 +26,95 @@ export default function RegisterPage() {
   };
 
   const navigate = useNavigation();
-  function goToScore(){
-    navigate.navigate("ScorePage")
-  };
+  function goToChangeBMWP() {
+    navigate.navigate("ChangeBMWP");
+  }
   return (
     <View style={styles.container}>
-      <TopBar>
-        <BtnHome></BtnHome>
+      <Bar>
+        <Span></Span>
         <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
-        <BtnHelp></BtnHelp>
-      </TopBar>
+        <BtnHelp s></BtnHelp>
+      </Bar>
 
       <LocationPlate text={"Informações"}></LocationPlate>
 
-      <ScrollView id="info" style={styles.inputs}>
+      <ScrollView id="info" style={styles.containerInputs} showsVerticalScrollIndicator={false}>
         <TextInputExample
           textForLabel={"Cidade"}
           placeholder={"Juiz de Fora"}
           value={""}
           marginBot={30}
-        />
+        >
+          <Image
+            source={require("./../../../assets/city.png")}
+            style={{ width: 50, height: 50 }}
+          ></Image>
+        </TextInputExample>
+
         <TextInputExample
           textForLabel={"Riacho"}
           placeholder={"Paraibuna"}
           value={""}
           marginBot={30}
-        />
+        >
+          <Image
+            source={require("./../../../assets/rio.png")}
+            style={{ width: 50, height: 50 }}
+          ></Image>
+        </TextInputExample>
+
         <TextInputExample
           textForLabel={"Data"}
           placeholder={"25-15-2023"}
           keyboardType={"numeric"}
           value={""}
           marginBot={30}
-        />
+        >
+          <Image
+            source={require("./../../../assets/calendario.png")}
+            style={{ width: 50, height: 50 }}
+          ></Image>
+        </TextInputExample>
+
         <TextInputExample
-          textForLabel={"Coletor"}
-          placeholder={"João Silva"}
-          value={""}
-          marginBot={30}
-        />
+            textForLabel={"Coletor n°1"}
+            placeholder={"João Silva"}
+            value={""}
+            marginBot={30}
+          >
+            <Image
+              source={require("./../../../assets/explorador.png")}
+              style={{ width: 50, height: 50 }}
+            ></Image>
+          </TextInputExample>
 
         {coletores.map((coletor, index) => (
           <TextInputExample
             key={index}
-            textForLabel={"Coletor"}
+            textForLabel={"Coletor n°" + (index + 2)}
             placeholder={"Novo coletor"}
             value={coletor}
             marginBot={30}
-          />
+          >
+            <Image
+              source={require("./../../../assets/explorador.png")}
+              style={{ width: 50, height: 50 }}
+            ></Image>
+          </TextInputExample>
         ))}
 
-        <TouchableOpacity onPress={createNewColetor} style={styles.button}>
+        <TouchableOpacity onPress={createNewColetor} style={styles.btnNewColector}>
           <Image source={require("../../../assets/More.png")} />
         </TouchableOpacity>
       </ScrollView>
 
-      <View style={styles.buttonArea}>
-        <TouchableOpacity onPress={goToScore} style={styles.buttonGo}>
-          <Image source={require("../../../assets/Arrow2.png")} />
-        </TouchableOpacity>
-      </View>
+      <Bar>
+        <Span></Span>
+        <Span></Span>
+        <Span></Span>
+        <BtnGo pageGo={"ChangeBMWP"}></BtnGo>
+      </Bar>
     </View>
   );
 }
@@ -99,16 +129,14 @@ const styles = StyleSheet.create({
 
     backgroundColor: "#fff",
   },
-
-  inputs: {
+  containerInputs: {
     height: "100%",
-
-    margin: 30,
+    margin: 15,
+    marginBottom:5
   },
 
-  button: {
+  btnNewColector: {
     padding: 30,
-
     height: 40,
 
     flexDirection: "row",
@@ -116,31 +144,35 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-around",
 
+    borderWidth: 0.5,
+    borderBottomWidth: 4,
+
+    borderRadius: 10,
+    borderColor: "#999",
+
     borderRadius: 10,
     backgroundColor: "#C8FAC0",
   },
-  buttonArea: {
+  tabArea: {
     width: "100%",
-    height: 60,
+    height: 50,
 
-    marginBottom:5,
-
+    backgroundColor:"#rgba(208, 179, 179, 0.35)",
     flexDirection: "row",
+    alignItems:"center",
     justifyContent: "flex-end",
   },
 
-  buttonGo: {
-
-    marginRight:30,
-    width:60,
-    flexDirection:"row",
+  btnTabGo: {
+    width: 40,
+    height:40,
+    
+    marginRight: 30,
+    
+    flexDirection: "row",
     alignContent: "center",
     alignItems: "center",
-    justifyContent:"center",
+    justifyContent: "center",
 
-    height:"100%",
-    borderRadius: 100,
-    backgroundColor: "#C0E5FA",
-    
-  },}
-);
+  },
+});
