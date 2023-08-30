@@ -111,8 +111,6 @@ export default function RegisterPage() {
 
       <Bar>
         <Span></Span>
-        <Span></Span>
-        <Span></Span>
         <BtnGo pageGo={"ChangeBMWP"}></BtnGo>
       </Bar>
     </View>

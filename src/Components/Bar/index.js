@@ -12,11 +12,13 @@ export default function Bar({children}) {
 
 const styles = StyleSheet.create({
     container: {
+        flexDirection: "row",
         alignItems: "center",
         alignContent:"center",
-        flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
 
+        paddingRight:15,
+        paddingLeft:15,
         height: 60,
         width: "100%",
         

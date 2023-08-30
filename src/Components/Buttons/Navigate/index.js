@@ -22,11 +22,7 @@ export default function BtnNavigate({text, action}) {
 const styles = StyleSheet.create({
   container:{
     
-    marginTop: 15,
-    marginBottom:15,
-    marginLeft:30,
-    marginRight:30,
-    
+    margin: 15,
     padding:20,
 
     alignItems:"center",

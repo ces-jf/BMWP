@@ -30,10 +30,6 @@ export default function ChangeBMWP() {
 
       <Bar>
         <BtnBack></BtnBack>
-
-        <Span></Span>
-        <Span></Span>
-        <Span></Span>
       </Bar>
     </View>
   );
