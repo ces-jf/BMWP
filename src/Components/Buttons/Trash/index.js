@@ -1,14 +1,11 @@
 import React from "react";
-import { View, Image, TouchableOpacity, StyleSheet } from "react-native";
-
+import { View, TouchableOpacity, StyleSheet } from "react-native";
+import Icon from 'react-native-vector-icons/Octicons';
 export default function BtnTrash() {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => {}}>
-      <Image
-          source={require('../../../../assets/Trash.png')}
-          style={styles.buttonImage}
-        />
+      <Icon name="trash" size={30}  color={"white"}/>
       </TouchableOpacity>
     </View>
   );
@@ -17,6 +14,7 @@ export default function BtnTrash() {
 const styles = StyleSheet.create({
   container:{
     padding: 10,
+    paddingLeft: 15,
     paddingRight: 35,
     
     marginTop: 10,

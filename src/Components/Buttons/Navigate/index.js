@@ -22,11 +22,7 @@ export default function BtnNavigate({text, action}) {
 const styles = StyleSheet.create({
   container:{
     
-    marginTop: 15,
-    marginBottom:15,
-    marginLeft:30,
-    marginRight:30,
-    
+    margin: 15,
     padding:20,
 
     alignItems:"center",
@@ -35,6 +31,10 @@ const styles = StyleSheet.create({
     
     borderRadius: 10,
     backgroundColor:"#C0E5FA",
+
+    borderWidth: 0.5,
+    borderBottomWidth: 4,
+    borderColor: "#748A96",
   },
   button: {
     minWidth:"100%",

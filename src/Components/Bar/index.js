@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 
 
-export default function TopBar({children}) {
+export default function Bar({children}) {
     return (
         <View style={styles.container}>
             {children}
@@ -12,15 +12,19 @@ export default function TopBar({children}) {
 
 const styles = StyleSheet.create({
     container: {
+        flexDirection: "row",
         alignItems: "center",
         alignContent:"center",
-        flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
 
+        padding:5,
+        paddingLeft:15,
+        paddingRight:15,
+        
         height: 60,
         width: "100%",
         
-        backgroundColor: "#0972AD",
+        backgroundColor: "#7498AD",
     },
     text: {
         fontFamily: "Pompiere_400Regular",

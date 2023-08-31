@@ -3,15 +3,20 @@ import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
+
 //Expo
 import { StatusBar } from "expo-status-bar";
 import * as ScreenOrientation from "expo-screen-orientation";
-import { useFonts, Pompiere_400Regular } from "@expo-google-fonts/pompiere";
+
+import { useFonts } from "expo-font";
+import { Pompiere_400Regular } from "@expo-google-fonts/pompiere";
+import { Poppins_100Thin,Poppins_500Medium } from "@expo-google-fonts/poppins";
 
 //Local
 import HelpPage from "./src/Pages/HelpPage";
-import HomePage from "./src/Pages/HomePage";
+import ChangeBMWP from "./src/Pages/ChangeBMWP";
 import LoadingPage from "./src/Pages/LoadingPage";
+import RegisterPage from "./src/Pages/RegisterPage"
 import ScorePage from "./src/Pages/ScorePage";
 
 //Navegação de telas, a partir dos botões
@@ -19,8 +24,10 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <View style={styles.container}>
+      <View style={styles.StatusBar}/>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="HomePage" component={HomePage} />
+        <Stack.Screen name="RegisterPage" component={RegisterPage}/>
+        <Stack.Screen name="ChangeBMWP" component={ChangeBMWP} />
         <Stack.Screen name="ScorePage" component={ScorePage} />
         <Stack.Screen name="LoadingPage" component={LoadingPage} />
         <Stack.Screen name="HelpPage" component={HelpPage} />
@@ -35,6 +42,9 @@ export default function App() {
 
   let [fontsLoaded, fontError] = useFonts({
     Pompiere_400Regular,
+    Poppins_100Thin,
+    Poppins_500Medium
+    
   });
 
   if (!fontsLoaded && !fontError) {
@@ -51,6 +61,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 30,
+  },
+  StatusBar :{
+    width:"100%",
+    height:30,
+    backgroundColor:"#526C7A"
   }
 });

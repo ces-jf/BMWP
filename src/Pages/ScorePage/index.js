@@ -1,9 +1,8 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import TopBar from "../../Components/TopBar";
+import Bar from "../../Components/Bar";
 import TitlePompiere from "../../Components/Text/Title";
-import BtnHelp from "../../Components/Buttons/Help";
-import BtnBack from "../../Components/Buttons/Back";
+import ButtonsSelect from "../../Components/BarButtons";
 import LocationPlate from "../../Components/LocationPlate";
 import BtnTrash from "../../Components/Buttons/Trash";
 import ParameterRuler from "../../Components/ParameterRuler/ParameterRuler";
@@ -12,11 +11,11 @@ import SubTitlePompiere from "../../Components/Text/SubTitles";
 export default function ScorePage() {
     return (
         <View style={styles.container}>
-            <TopBar>
-                <BtnBack></BtnBack>
+            <Bar>
+                <ButtonsSelect typeButton={"btnBack"}></ButtonsSelect>
                 <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
-                <BtnHelp></BtnHelp>
-            </TopBar>
+                <ButtonsSelect typeButton={"btnHelp"}></ButtonsSelect>
+            </Bar>
             <View style={styles.locationContainer}>
                 <View style={styles.locationPlateContainer}>
                     <LocationPlate text={"Resultados"}></LocationPlate>

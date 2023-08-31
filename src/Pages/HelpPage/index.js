@@ -2,8 +2,8 @@ import React from "react";
 import { StyleSheet, View, Text, ScrollView } from "react-native";
 
 import Span from "../../Components/Span";
-import TopBar from "../../Components/TopBar";
-import BtnBack from "../../Components/Buttons/Back";
+import Bar from "../../Components/Bar";
+import ButtonsSelect from "../../Components/BarButtons";
 import TitlePompiere from "../../Components/Text/Title";
 import LocationPlate from "../../Components/LocationPlate";
 import SubTitlePompiere from "../../Components/Text/SubTitles";
@@ -11,11 +11,11 @@ import SubTitlePompiere from "../../Components/Text/SubTitles";
 export default function HelpPage() {
   return (
     <View style={styles.container}>
-      <TopBar>
-        <BtnBack></BtnBack>
+      <Bar>
+        <Span></Span>
         <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
         <Span></Span>
-      </TopBar>
+      </Bar>
 
       <LocationPlate text={"Referência Bibliográfica"}></LocationPlate>
 
@@ -51,6 +51,11 @@ export default function HelpPage() {
           tonto
         </Text>
       </ScrollView>
+      <Bar>
+        <ButtonsSelect typeButton={"btnBack"}></ButtonsSelect>
+        <ButtonsSelect typeButton={"btnHome"}></ButtonsSelect>
+        <Span></Span>
+      </Bar>
     </View>
   );
 }
