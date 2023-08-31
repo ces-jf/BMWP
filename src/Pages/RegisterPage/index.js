@@ -1,6 +1,5 @@
 //React
 import React, { useState } from "react";
-import Icon from "react-native-vector-icons/Entypo";
 
 import {
   ScrollView,
@@ -45,7 +44,10 @@ export default function RegisterPage() {
           value={""}
           marginBot={30}
         >
-          <Icon name="location-pin" size={50} color={"#FA0900"} />
+          <Image
+            source={require("../../../assets/city.png")}
+            style={styles.imagesInput}
+          />
         </TextInputExample>
 
         <TextInputExample
@@ -54,7 +56,10 @@ export default function RegisterPage() {
           value={""}
           marginBot={30}
         >
-          <Icon name="water" size={50} color={"#6C89FA"} />
+          <Image
+            source={require("../../../assets/river.png")}
+            style={styles.imagesInput}
+          />
         </TextInputExample>
 
         <TextInputExample
@@ -64,7 +69,10 @@ export default function RegisterPage() {
           value={""}
           marginBot={30}
         >
-          <Icon name="calendar" size={50} color={"#D4370B"} />
+          <Image
+            source={require("../../../assets/calendar.png")}
+            style={styles.imagesInput}
+          />
         </TextInputExample>
 
         {coletores.map((coletor, index) => (
@@ -75,7 +83,10 @@ export default function RegisterPage() {
             value={coletor}
             marginBot={30}
           >
-            <Icon name="user" size={50} color={"#000"} />
+            <Image
+              source={require("../../../assets/explorer.png")}
+              style={styles.imagesInput}
+            />
           </TextInputExample>
         ))}
 
@@ -83,7 +94,9 @@ export default function RegisterPage() {
           onPress={createNewColetor}
           style={styles.btnNewColector}
         >
-          <Icon name={"plus"} size={50} color="#000" />
+          <Image
+            source={require("../../../assets/more.png")}
+          />
         </TouchableOpacity>
       </ScrollView>
 
@@ -107,18 +120,23 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   containerInputs: {
-    height: "100%",
     margin: 15,
     marginBottom: 5,
+  },
+  imagesInput: {
+    height: 50,
+    width: 50,
   },
 
   btnNewColector: {
     maxHeight: "100%",
 
+    padding:20,
+
     flexDirection: "row",
     alignContent: "center",
     alignItems: "center",
-    justifyContent: "space-around",
+    justifyContent: "center",
 
     borderWidth: 0.5,
     borderBottomWidth: 4,

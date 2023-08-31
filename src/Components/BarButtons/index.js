@@ -1,8 +1,7 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
-// import Icon from 'react-native-vector-icons/AntDesign';
-import Icon from 'react-native-vector-icons/Entypo';
+import { View, Image, TouchableOpacity, StyleSheet } from "react-native";
+
 
 
 export default function ButtonsSelect({ typeButton, page }) {
@@ -35,30 +34,31 @@ export default function ButtonsSelect({ typeButton, page }) {
   switch (typeButton) {
     case "btnBack":
       functionBtn = backPage;
-      imageBtn = "chevron-left";
+      imageBtn = require("../../../assets/Arrow.png");
       break;
     case "btnGo":
       functionBtn = goPage;
-      imageBtn = "chevron-right";
+      imageBtn = require("../../../assets/Arrow.png");
+      rotation = 180;
       break;
     case "btnHelp":
       functionBtn = goToHelpPage;
-      imageBtn = "help";
+      imageBtn = require("../../../assets/Help.png");
       break;
     case "btnHome":
       functionBtn = goToHomePage;
-      imageBtn = "home";
+      imageBtn = require("../../../assets/Home.png");
       break;
 
     default:
-      imageBtn = "minus";
+      imageBtn = "";
       break;
   }
 
   return (
     <View>
       <TouchableOpacity style={styles.button} onPress={functionBtn}>
-        <Icon name={imageBtn} size={20} color="#000" />
+        <Image source={imageBtn} style={[styles.buttonImage,{ transform: [{ rotate: `${rotation}deg`}]}]} />
       </TouchableOpacity>
     </View>
   );
