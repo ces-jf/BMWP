@@ -31,6 +31,10 @@ const styles = StyleSheet.create({
     
     borderRadius: 10,
     backgroundColor:"#C0E5FA",
+
+    borderWidth: 0.5,
+    borderBottomWidth: 4,
+    borderColor: "#748A96",
   },
   button: {
     minWidth:"100%",

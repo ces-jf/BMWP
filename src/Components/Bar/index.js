@@ -17,12 +17,14 @@ const styles = StyleSheet.create({
         alignContent:"center",
         justifyContent: "space-between",
 
-        paddingRight:15,
+        padding:5,
         paddingLeft:15,
+        paddingRight:15,
+        
         height: 60,
         width: "100%",
         
-        backgroundColor: "#0972AD",
+        backgroundColor: "#7498AD",
     },
     text: {
         fontFamily: "Pompiere_400Regular",

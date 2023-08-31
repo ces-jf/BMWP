@@ -3,6 +3,7 @@ import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
+
 //Expo
 import { StatusBar } from "expo-status-bar";
 import * as ScreenOrientation from "expo-screen-orientation";
@@ -23,6 +24,7 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <View style={styles.container}>
+      <View style={styles.StatusBar}/>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="RegisterPage" component={RegisterPage}/>
         <Stack.Screen name="ChangeBMWP" component={ChangeBMWP} />
@@ -59,6 +61,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 30,
+  },
+  StatusBar :{
+    width:"100%",
+    height:30,
+    backgroundColor:"#526C7A"
   }
 });

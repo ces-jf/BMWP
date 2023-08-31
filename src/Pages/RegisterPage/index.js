@@ -1,5 +1,6 @@
+//React
 import React, { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
+import Icon from "react-native-vector-icons/Entypo";
 
 import {
   ScrollView,
@@ -7,49 +8,44 @@ import {
   View,
   Image,
   TouchableOpacity,
-  Text,
 } from "react-native";
 
-import BtnHelp from "../../Components/Buttons/Help";
-import TitlePompiere from "../../Components/Text/Title";
+//Local
 import Bar from "../../Components/Bar";
-import Span from "../../Components/Span";
-import BtnGo from "../../Components/Buttons/Go";
+import ButtonsSelect from "../../Components/BarButtons";
 import LocationPlate from "../../Components/LocationPlate";
+import Span from "../../Components/Span";
 import TextInputExample from "../../Components/Input";
+import TitlePompiere from "../../Components/Text/Title";
 
 export default function RegisterPage() {
-  const [coletores, setColetores] = useState([]); // Estado para armazenar os coletores
-
+  const [coletores, setColetores] = useState([""]);
   const createNewColetor = () => {
-    setColetores([...coletores, ""]); // Adicionar um novo coletor vazio ao estado
+    setColetores([...coletores, ""]);
   };
 
-  const navigate = useNavigation();
-  function goToChangeBMWP() {
-    navigate.navigate("ChangeBMWP");
-  }
   return (
-    <View style={styles.container}>
+    <View style={styles.containerPage}>
       <Bar>
         <Span></Span>
         <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
-        <BtnHelp s></BtnHelp>
+        <ButtonsSelect typeButton={"btnHelp"}></ButtonsSelect>
       </Bar>
 
       <LocationPlate text={"Informações"}></LocationPlate>
 
-      <ScrollView id="info" style={styles.containerInputs} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        id="info"
+        style={styles.containerInputs}
+        showsVerticalScrollIndicator={false}
+      >
         <TextInputExample
           textForLabel={"Cidade"}
           placeholder={"Juiz de Fora"}
           value={""}
           marginBot={30}
         >
-          <Image
-            source={require("./../../../assets/city.png")}
-            style={{ width: 50, height: 50 }}
-          ></Image>
+          <Icon name="location-pin" size={50} color={"#FA0900"} />
         </TextInputExample>
 
         <TextInputExample
@@ -58,10 +54,7 @@ export default function RegisterPage() {
           value={""}
           marginBot={30}
         >
-          <Image
-            source={require("./../../../assets/rio.png")}
-            style={{ width: 50, height: 50 }}
-          ></Image>
+          <Icon name="water" size={50} color={"#6C89FA"} />
         </TextInputExample>
 
         <TextInputExample
@@ -71,54 +64,40 @@ export default function RegisterPage() {
           value={""}
           marginBot={30}
         >
-          <Image
-            source={require("./../../../assets/calendario.png")}
-            style={{ width: 50, height: 50 }}
-          ></Image>
+          <Icon name="calendar" size={50} color={"#D4370B"} />
         </TextInputExample>
-
-        <TextInputExample
-            textForLabel={"Coletor n°1"}
-            placeholder={"João Silva"}
-            value={""}
-            marginBot={30}
-          >
-            <Image
-              source={require("./../../../assets/explorador.png")}
-              style={{ width: 50, height: 50 }}
-            ></Image>
-          </TextInputExample>
 
         {coletores.map((coletor, index) => (
           <TextInputExample
             key={index}
-            textForLabel={"Coletor n°" + (index + 2)}
+            textForLabel={"Coletor n°" + (index + 1)}
             placeholder={"Novo coletor"}
             value={coletor}
             marginBot={30}
           >
-            <Image
-              source={require("./../../../assets/explorador.png")}
-              style={{ width: 50, height: 50 }}
-            ></Image>
+            <Icon name="user" size={50} color={"#000"} />
           </TextInputExample>
         ))}
 
-        <TouchableOpacity onPress={createNewColetor} style={styles.btnNewColector}>
-          <Image source={require("../../../assets/More.png")} />
+        <TouchableOpacity
+          onPress={createNewColetor}
+          style={styles.btnNewColector}
+        >
+          <Icon name={"plus"} size={50} color="#000" />
         </TouchableOpacity>
       </ScrollView>
 
       <Bar>
         <Span></Span>
-        <BtnGo pageGo={"ChangeBMWP"}></BtnGo>
+        <ButtonsSelect typeButton={""}></ButtonsSelect>
+        <ButtonsSelect typeButton={"btnGo"} page={"ChangeBMWP"}></ButtonsSelect>
       </Bar>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  containerPage: {
     alignItems: "flex-start",
     flexDirection: "column",
 
@@ -130,12 +109,11 @@ const styles = StyleSheet.create({
   containerInputs: {
     height: "100%",
     margin: 15,
-    marginBottom:5
+    marginBottom: 5,
   },
 
   btnNewColector: {
-    padding: 30,
-    height: 40,
+    maxHeight: "100%",
 
     flexDirection: "row",
     alignContent: "center",
@@ -146,7 +124,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 4,
 
     borderRadius: 10,
-    borderColor: "#999",
+    borderColor: "#748A96",
 
     borderRadius: 10,
     backgroundColor: "#C8FAC0",
@@ -155,22 +133,21 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 50,
 
-    backgroundColor:"#rgba(208, 179, 179, 0.35)",
+    backgroundColor: "#rgba(208, 179, 179, 0.35)",
     flexDirection: "row",
-    alignItems:"center",
+    alignItems: "center",
     justifyContent: "flex-end",
   },
 
   btnTabGo: {
     width: 40,
-    height:40,
-    
+    height: 40,
+
     marginRight: 30,
-    
+
     flexDirection: "row",
     alignContent: "center",
     alignItems: "center",
     justifyContent: "center",
-
   },
 });
