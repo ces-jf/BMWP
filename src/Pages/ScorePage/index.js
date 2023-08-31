@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import TopBar from "../../Components/TopBar";
+import Bar from "../../Components/Bar";
 import TitlePompiere from "../../Components/Text/Title";
 import BtnHelp from "../../Components/Buttons/Help";
 import BtnHome from "../../Components/Buttons/Home";
@@ -12,11 +12,11 @@ import SubTitlePompiere from "../../Components/Text/SubTitles";
 export default function ScorePage() {
     return (
         <View style={styles.container}>
-            <TopBar>
+            <Bar>
                 <BtnHome></BtnHome>
                 <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
                 <BtnHelp></BtnHelp>
-            </TopBar>
+            </Bar>
             <View style={styles.locationContainer}>
                 <View style={styles.locationPlateContainer}>
                     <LocationPlate text={"Resultados"}></LocationPlate>
