@@ -19,6 +19,8 @@ import LoadingPage from "./src/Pages/LoadingPage";
 import RegisterPage from "./src/Pages/RegisterPage"
 import ScorePage from "./src/Pages/ScorePage";
 
+import Bmwp1983 from "./src/Pages/TypeBMWP/1983";
+
 //Navegação de telas, a partir dos botões
 const Stack = createStackNavigator();
 function MyStack() {
@@ -26,6 +28,7 @@ function MyStack() {
     <View style={styles.container}>
       <View style={styles.StatusBar}/>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Bmwp1983" component={Bmwp1983}/>
         <Stack.Screen name="RegisterPage" component={RegisterPage}/>
         <Stack.Screen name="ChangeBMWP" component={ChangeBMWP} />
         <Stack.Screen name="ScorePage" component={ScorePage} />
