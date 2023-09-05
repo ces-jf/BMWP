@@ -14,120 +14,99 @@ import TitlePompiere from "../../../Components/Text/Title";
 import ButtonsSelect from "../../../Components/BarButtons";
 import Span from "../../../Components/Span";
 
-export default function Bmwp1983() {
+export default function Bmwp1998() {
 
 //SCORE 10
   const [taxonsScore10, setTaxonsScore10] = useState([
-    { id: "1", name: "Slphlonuridae", marked: false, color: "#fff" },
-    { id: "2", name: "Heptageniidae", marked: false, color: "#fff" },
-    { id: "3", name: "Leptophlebiidae", marked: false, color: "#fff" },
-    { id: "4", name: "Ephemerellidae", marked: false, color: "#fff" },
-    { id: "5", name: "Potamanthidae", marked: false, color: "#fff" },
-    { id: "6", name: "Ephemeridae", marked: false, color: "#fff" },
-    { id: "7", name: "Taeniopterygidae", marked: false, color: "#fff" },
-    { id: "8", name: "Leuctridae", marked: false, color: "#fff" },
-    { id: "9", name: "Capniidae", marked: false, color: "#fff" },
-    { id: "10", name: "Pelodidae", marked: false, color: "#fff" },
-    { id: "11", name: "Perlidae", marked: false, color: "#fff" },
-    { id: "12", name: "Chloroperlidae", marked: false, color: "#fff" },
-    { id: "13", name: "Aphelocheiridae", marked: false, color: "#fff" },
-    { id: "14", name: "Phryganeidae", marked: false, color: "#fff" },
-    { id: "15", name: "Molannidae", marked: false, color: "#fff" },
-    { id: "16", name: "Beraeridae", marked: false, color: "#fff" },
-    { id: "17", name: "Odontoceridae", marked: false, color: "#fff" },
-    { id: "18", name: "Leptoceridae", marked: false, color: "#fff" },
-    { id: "19", name: "Goeridae", marked: false, color: "#fff" },
-    { id: "20", name: "Lepidostomatidae", marked: false, color: "#fff" },
-    { id: "21", name: "Brachycentridae", marked: false, color: "#fff" },
-    { id: "22", name: "Sericostomatidae", marked: false, color: "#fff" },
+    { id: "1", name: "Siphlonuridae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "2", name: "Gripopterygidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "3", name: "Pyralidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "4", name: "Odontoceridae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "5", name: "Hydroscaphidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "6", name: "Helicopsychidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+
   ]);
 
 //SCORE 8
   const [taxonsScore8, setTaxonsScore8] = useState([
-    { id: "1", name: "Astacidae", marked: false, color: "#fff" },
-    { id: "2", name: "Lestidae", marked: false, color: "#fff" },
-    { id: "3", name: "Agriidae", marked: false, color: "#fff" },
-    { id: "4", name: "Gomphidae", marked: false, color: "#fff" },
-    { id: "5", name: "Cordulegasteridae", marked: false, color: "#fff" },
-    { id: "6", name: "Aeshnidae", marked: false, color: "#fff" },
-    { id: "7", name: "Corduliidae", marked: false, color: "#fff" },
-    { id: "8", name: "Libellulidae", marked: false, color: "#fff" },
-    { id: "9", name: "Psychomyiidae", marked: false, color: "#fff" },
-    { id: "10", name: "Philopotamidae", marked: false, color: "#fff" },
+    { id: "1", name: "Leptophlebiidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "2", name: "Perlidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "3", name: "Hebridae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "4", name: "Hydrobiosidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "5", name: "Philopotamidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "6", name: "Calopterygidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "7", name: "Psephenidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "8", name: "Dixidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+
   ]);
  
 //SCORE 7
   const [taxonsScore7, setTaxonsScore7] = useState([
-    { id: "1", name: "Caenidae", marked: false, color: "#fff" },
-    { id: "2", name: "Nemouridae", marked: false, color: "#fff" },
-    { id: "3", name: "Rhyacophilidae", marked: false, color: "#fff" },
-    { id: "4", name: "Polycentropodidae", marked: false, color: "#fff" },
-    { id: "5", name: "Limnephilidae", marked: false, color: "#fff" },
+    { id: "1", name: "Leptohyphidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "2", name: "Veliidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "3", name: "Leptoceridae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "4", name: "Polycentropodidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+
   ]);
 
 //SCORE 6
   const [taxonsScore6, setTaxonsScore6] = useState([
-    { id: "1", name: "Neritidae", marked: false, color: "#fff" },
-    { id: "2", name: "Viviparidae", marked: false, color: "#fff" },
-    { id: "3", name: "Ancylidae", marked: false, color: "#fff" },
-    { id: "4", name: "Hydroptilidae", marked: false, color: "#fff" },
-    { id: "5", name: "Umonidae", marked: false, color: "#fff" },
-    { id: "6", name: "Corophiidae", marked: false, color: "#fff" },
-    { id: "7", name: "Gammaridae", marked: false, color: "#fff" },
-    { id: "8", name: "Platyenemididae", marked: false, color: "#fff" },
-    { id: "9", name: "Coenagrionidae", marked: false, color: "#fff" },
+    { id: "1", name: "Glossosomatidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "2", name: "Hydroptilidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "3", name: "Gyrinidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "4", name: "Coenagrionidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "5", name: "Ancylidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  
   ]);
 
 //SCORE 5
   const [taxonsScore5, setTaxonsScore5] = useState([
-    { id: "1", name: "Mesoveliidae", marked: false, color: "#fff" },
-    { id: "2", name: "Hydrometridae", marked: false, color: "#fff" },
-    { id: "3", name: "Gerridae", marked: false, color: "#fff" },
-    { id: "4", name: "Nepidae", marked: false, color: "#fff" },
-    { id: "5", name: "Naucoridae", marked: false, color: "#fff" },
-    { id: "6", name: "Notonectidae", marked: false, color: "#fff" },
-    { id: "7", name: "Pleidae", marked: false, color: "#fff" },
-    { id: "8", name: "Corixidae", marked: false, color: "#fff" },
-    { id: "9", name: "Haliplidae", marked: false, color: "#fff" },
-    { id: "10", name: "Hygrobiidae", marked: false, color: "#fff" },
-    { id: "11", name: "Dytiscidae", marked: false, color: "#fff" },
-    { id: "12", name: "Gyrinidae", marked: false, color: "#fff" },
-    { id: "13", name: "Hydrophilidae", marked: false, color: "#fff" },
-    { id: "14", name: "Clambidae", marked: false, color: "#fff" },
-    { id: "15", name: "Helodidae", marked: false, color: "#fff" },
-    { id: "16", name: "Dryopidae", marked: false, color: "#fff" },
-    { id: "17", name: "Elminthidae", marked: false, color: "#fff" },
-    { id: "18", name: "Chrysomelidae", marked: false, color: "#fff" },
-    { id: "19", name: "Curculionidae", marked: false, color: "#fff" },
-    { id: "20", name: "Hydropsychidae", marked: false, color: "#fff" },
-    { id: "21", name: "Tlpulidae", marked: false, color: "#fff" },
-    { id: "22", name: "Simuliidae", marked: false, color: "#fff" },
+    { id: "1", name: "Naucoridae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "2", name: "Belostomatidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "3", name: "Corixidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "4", name: "Nepidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "5", name: "Hydropsychidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "6", name: "Gomphidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "7", name: "Libellulidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "8", name: "Dysticidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "9", name: "Corydalidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "10", name: "Dugesiidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "11", name: "Simuliidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  
   ]);
   
 //SCORE 4
   const [taxonsScore4, setTaxonsScore4] = useState([
-    { id: "1", name: "Baetidae", marked: false, color: "#fff" },
-    { id: "2", name: "Sialidae", marked: false, color: "#fff" },
-    { id: "3", name: "Piscicolidae", marked: false, color: "#fff" },
+    { id: "1", name: "Baetidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "2", name: "Elmidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "3", name: "Hydrophilidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "4", name: "Piscicolidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "5", name: "Athericidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "6", name: "Empidoidea", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  { id: "7", name: "Tabanidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+
   ]);
 
 //SCORE 3
   const [taxonsScore3, setTaxonsScore3] = useState([
-    { id: "1", name: "Valvatidae", marked: false, color: "#fff" },
-    { id: "2", name: "Hydrobiidae", marked: false, color: "#fff" },
-    { id: "3", name: "Lymnaeidae", marked: false, color: "#fff" },
-    { id: "4", name: "Physidae", marked: false, color: "#fff" },
-    { id: "5", name: "Planorbidae", marked: false, color: "#fff" },
-    { id: "6", name: "Sphaeriidae", marked: false, color: "#fff" },
-    { id: "7", name: "Glossiphonidae", marked: false, color: "#fff" },
-    { id: "8", name: "Hirudinae", marked: false, color: "#fff" },
-    { id: "9", name: "Erpobdeliidae", marked: false, color: "#fff" },
-    { id: "10", name: "Asellidae", marked: false, color: "#fff" },
+    { id: "1", name: "Physidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "2", name: "Planorbidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "3", name: "Sphaeriidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "4", name: "Glossiphoniidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "5", name: "Ceratopogonidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "6", name: "Tipulidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "7", name: "Culicidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  
   ]);
  
 //SCORE 2
   const [taxonsScore2, setTaxonsScore2] = useState([
-    { id: "1", name: "Chironomidae", marked: false, color: "#fff" },
+    { id: "1", name: "Erpobdeliidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "2", name: "Chironomidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "3", name: "Psychodidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "4", name: "Stratiomyidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+    { id: "5", name: "Erpobdeliidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
+  
   ]);
  
 //SCORE 1
@@ -160,8 +139,7 @@ export default function Bmwp1983() {
   return (
     <View style={styles.container}>
       <Bar>
-        <Span></Span>
-        <TitlePompiere text={"Armitage - 1983"} color={"#fff"}></TitlePompiere>
+        <TitlePompiere text={"Junqueira & Campo 1998"} color={"#fff"}></TitlePompiere>
         <ButtonsSelect typeButton={"btnHelp"}></ButtonsSelect>
       </Bar>
 
@@ -440,7 +418,7 @@ export default function Bmwp1983() {
       <Bar>
         <ButtonsSelect typeButton={"btnBack"}></ButtonsSelect>
         <ButtonsSelect typeButton={"btnHome"}></ButtonsSelect>
-        <ButtonsSelect typeButton={"btnGo"} page={"ScorePage"}></ButtonsSelect>
+        <ButtonsSelect typeButton={"btnGo"} page={"ScorePage"} ></ButtonsSelect>
       </Bar>
     </View>
   );

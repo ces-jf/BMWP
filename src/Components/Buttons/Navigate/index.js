@@ -3,17 +3,17 @@ import SubTitlePompiere from "../../Text/SubTitles";
 import { useNavigation } from "@react-navigation/native";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-export default function BtnNavigate({text, action}) {
+export default function BtnNavigate({text, location,color}) {
 
   //TODO[] adicionar pagians conforme for passado 
   const navigate = useNavigation()
   function goScore(){
-    navigate.navigate("ScorePage")
+    navigate.navigate(location)
   }
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor : color}]}>
       <TouchableOpacity style={styles.button} onPress={goScore}>
-        <SubTitlePompiere color={"#000"} fontSize={24} text={text}></SubTitlePompiere>
+        <SubTitlePompiere color={"#fff"} fontSize={24} text={text}></SubTitlePompiere>
       </TouchableOpacity>
     </View>
   );
@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     
     borderRadius: 10,
-    backgroundColor:"#C0E5FA",
 
     borderWidth: 0.5,
     borderBottomWidth: 4,

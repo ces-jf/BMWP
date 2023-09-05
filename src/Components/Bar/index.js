@@ -20,11 +20,10 @@ const styles = StyleSheet.create({
         padding:5,
         paddingLeft:15,
         paddingRight:15,
-        
         height: 60,
         width: "100%",
         
-        backgroundColor: "#7498AD",
+        backgroundColor: "#023859",
     },
     text: {
         fontFamily: "Pompiere_400Regular",
