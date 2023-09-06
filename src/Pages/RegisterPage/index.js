@@ -27,7 +27,7 @@ export default function RegisterPage() {
     <View style={styles.containerPage}>
       <Bar>
         <Span></Span>
-        <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
+        <TitlePompiere text={"BMWP & ASPT Calculator"} size={25} color={"#fff"}></TitlePompiere>
         <ButtonsSelect typeButton={"btnHelp"}></ButtonsSelect>
       </Bar>
 
