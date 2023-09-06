@@ -208,7 +208,7 @@ export default function Bmwp1983() {
         </View>
 
         <View style={{ backgroundColor: "#a0f9e6", padding: 15 }}>
-          <TitlePompiere text={"Score 8"}></TitlePompiere>
+          <TitlePompiere text={"Score 8"} color={"#1c1c1c"}></TitlePompiere>
           <FlatList
             style={{ marginBottom: 30 }}
             data={taxonsScore8}
@@ -242,7 +242,7 @@ export default function Bmwp1983() {
         </View>
 
         <View style={{ backgroundColor: "#7ee6d1", padding: 15 }}>
-          <TitlePompiere text={"Score 7"}></TitlePompiere>
+          <TitlePompiere text={"Score 7"} color={"#383838"}></TitlePompiere>
 
           <FlatList
             style={{ marginBottom: 30 }}
@@ -277,7 +277,7 @@ export default function Bmwp1983() {
         </View>
 
         <View style={{ backgroundColor: "#5cb3bc", padding: 15 }}>
-          <TitlePompiere text={"Score 6"}></TitlePompiere>
+          <TitlePompiere text={"Score 6"} color={"#555555"}></TitlePompiere>
 
           <FlatList
             style={{ marginBottom: 30 }}
@@ -312,7 +312,7 @@ export default function Bmwp1983() {
         </View>
 
         <View style={{ backgroundColor: "#388fa7", padding: 15 }}>
-          <TitlePompiere text={"Score 5"}></TitlePompiere>
+          <TitlePompiere text={"Score 5"} color={"#dddddd"}></TitlePompiere>
 
           <FlatList
             style={{ marginBottom: 30 }}
@@ -347,7 +347,7 @@ export default function Bmwp1983() {
         </View>
 
         <View style={{ backgroundColor: "#165c92", padding: 15 }}>
-          <TitlePompiere text={"Score 4"} color={"#fff"}></TitlePompiere>
+          <TitlePompiere text={"Score 4"} color={"#dddddd"}></TitlePompiere>
 
           <FlatList
             style={{ marginBottom: 30 }}
@@ -382,7 +382,7 @@ export default function Bmwp1983() {
         </View>
 
         <View style={{ backgroundColor: "#125283", padding: 15 }}>
-          <TitlePompiere text={"Score 3"} color={"#fff"}></TitlePompiere>
+          <TitlePompiere text={"Score 3"} color={"#dddddd"}></TitlePompiere>
 
           <FlatList
             style={{ marginBottom: 30 }}
@@ -417,7 +417,7 @@ export default function Bmwp1983() {
         </View>
 
         <View style={{ backgroundColor: "#0f4a74", padding: 15 }}>
-          <TitlePompiere text={"Score 2"} color={"#fff"}></TitlePompiere>
+          <TitlePompiere text={"Score 2"} color={"#f1f1f1"}></TitlePompiere>
 
           <FlatList
             style={{ marginBottom: 30 }}
