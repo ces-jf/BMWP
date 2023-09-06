@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-export default function TitlePompiere({text, color}) {
+export default function TitlePompiere({text, color, size}) {
   return (
     <View style={styles.container}>
-      <Text style={[styles.title, { color: color || "#000" }]}>{text}</Text>
+      <Text style={[styles.title, { color: color || "#000" }, {fontSize : size || 34} ]}>{text}</Text>
     </View>
   );
 }
@@ -12,8 +12,6 @@ export default function TitlePompiere({text, color}) {
 const styles = StyleSheet.create({
   title: {
     textAlign:"center",
-    textTransform: "uppercase",
     fontFamily: "Pompiere_400Regular",
-    fontSize: 34,
   },
 });

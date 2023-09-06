@@ -27,7 +27,7 @@ export default function RegisterPage() {
     <View style={styles.containerPage}>
       <Bar>
         <Span></Span>
-        <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
+        <TitlePompiere text={"BMWP & ASPT Calculator"} size={25} color={"#fff"}></TitlePompiere>
         <ButtonsSelect typeButton={"btnHelp"}></ButtonsSelect>
       </Bar>
 
@@ -95,14 +95,16 @@ export default function RegisterPage() {
           style={styles.btnNewColector}
         >
           <Image
-            source={require("../../../assets/more.png")}
+            source={require("../../../assets/moreLigth.png")}
+            style={{width:40, height:40}}
           />
         </TouchableOpacity>
       </ScrollView>
 
       <Bar>
         <Span></Span>
-        <ButtonsSelect typeButton={""}></ButtonsSelect>
+        <Span></Span>
+    
         <ButtonsSelect typeButton={"btnGo"} page={"ChangeBMWP"}></ButtonsSelect>
       </Bar>
     </View>
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
   },
   containerInputs: {
     margin: 15,
-    marginBottom: 5,
+    marginTop:0
   },
   imagesInput: {
     height: 50,
@@ -145,7 +147,7 @@ const styles = StyleSheet.create({
     borderColor: "#748A96",
 
     borderRadius: 10,
-    backgroundColor: "#C8FAC0",
+    backgroundColor: "#025373",
   },
   tabArea: {
     width: "100%",

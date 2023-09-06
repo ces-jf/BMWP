@@ -13,6 +13,5 @@ const styles = StyleSheet.create({
   title: {
     textAlign:"center",
     fontFamily: "Pompiere_400Regular",
-    textTransform: "capitalize",
   },
 });

@@ -19,6 +19,9 @@ import LoadingPage from "./src/Pages/LoadingPage";
 import RegisterPage from "./src/Pages/RegisterPage"
 import ScorePage from "./src/Pages/ScorePage";
 
+import Bmwp1983 from "./src/Pages/TypeBMWP/1983";
+import Bmwp1998 from "./src/Pages/TypeBMWP/1998";
+
 //Navegação de telas, a partir dos botões
 const Stack = createStackNavigator();
 function MyStack() {
@@ -28,9 +31,14 @@ function MyStack() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="RegisterPage" component={RegisterPage}/>
         <Stack.Screen name="ChangeBMWP" component={ChangeBMWP} />
+
+        <Stack.Screen name="Bmwp1983" component={Bmwp1983}/>
+        <Stack.Screen name="Bmwp1998" component={Bmwp1998}/>
+
+
+        <Stack.Screen name="HelpPage" component={HelpPage} />
         <Stack.Screen name="ScorePage" component={ScorePage} />
         <Stack.Screen name="LoadingPage" component={LoadingPage} />
-        <Stack.Screen name="HelpPage" component={HelpPage} />
       </Stack.Navigator>
     </View>
   );
@@ -53,7 +61,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <MyStack></MyStack>
-      <StatusBar style="auto"></StatusBar>
+      <StatusBar style="light"></StatusBar>
     </NavigationContainer>
   );
 }
@@ -65,6 +73,6 @@ const styles = StyleSheet.create({
   StatusBar :{
     width:"100%",
     height:30,
-    backgroundColor:"#526C7A"
+    backgroundColor:"#011526"
   }
 });

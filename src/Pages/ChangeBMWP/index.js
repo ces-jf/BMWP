@@ -15,24 +15,22 @@ export default function ChangeBMWP() {
     <View style={styles.containerPage}>
       <Bar>
         <Span></Span>
-        <TitlePompiere text={"BMWP & ASPT"} color={"#fff"}></TitlePompiere>
+        <TitlePompiere text={"BMWP & ASPT Calculator"} size={25} color={"#fff"}></TitlePompiere>
         <ButtonsSelect typeButton={"btnHelp"}></ButtonsSelect>
       </Bar>
 
-      <LocationPlate text={"Tipo de pesquisa"}></LocationPlate>
-      <ScrollView>
+      <LocationPlate text={"Método Utilizado"}></LocationPlate>
+      <ScrollView contentContainerStyle={styles.scroll}>
 
-{/* TODO adicionar mais custumizações nestes botões, para cada tipo de método de avaliação */}
-        <Span></Span>
-        <BtnNavigate text={"Armitage et al. – 1983"}></BtnNavigate>
-        <BtnNavigate text={"Junqueira & Campos - 1998"}></BtnNavigate>
-        <BtnNavigate text={"Junqueira et al. – 2000"}></BtnNavigate>
-        <BtnNavigate text={"Junqueira et al. – 2018"}></BtnNavigate>
+        <BtnNavigate text={"Armitage 𝑒𝑡 𝑎𝑙., 1983"} location={"Bmwp1983"} color={"#699EBF"}></BtnNavigate>
+        <BtnNavigate text={"Junqueira & Campos, 1998"} location={"Bmwp1998"}      color={"#025373"}></BtnNavigate>
+        <BtnNavigate text={"Junqueira 𝑒𝑡 𝑎𝑙.,2000"} location={""}        color={"#699EBF"}></BtnNavigate>
+        <BtnNavigate text={"Junqueira 𝑒𝑡 𝑎𝑙.,2018"} location={""}        color={"#025373"}></BtnNavigate>
 
       </ScrollView>
 
       <Bar>
-        <ButtonsSelect typeButton={"btnBack"}></ButtonsSelect>
+        <Span></Span>
         <ButtonsSelect typeButton={"btnHome"}></ButtonsSelect>
         <Span></Span>
       </Bar>
@@ -50,5 +48,10 @@ const styles = StyleSheet.create({
     width: "100%",
 
     backgroundColor: "#fff",
+  },scroll:{
+    alignItems:"center",
+    alignContent:"center",
+    justifyContent:"center",
+
   }
 });

@@ -6,33 +6,30 @@ import SubTitlePompiere from "../Text/SubTitles";
 export default function LocationPlate({text}) {
   return (
     <View style={styles.plateArea}>
-      <SubTitlePompiere color={"#000"} fontSize={24} text={text}></SubTitlePompiere>
+      <SubTitlePompiere color={"#fff"} fontSize={24} text={text}></SubTitlePompiere>
     </View>
   );
 }
 const styles = StyleSheet.create({
   plateArea: {
 
+    margin:15,
+
     padding: 10,
     paddingLeft:20,
     paddingRight:20,
-
-    marginTop:30,
     
-    alignContent:"center",
     alignItems:"center",
+    alignContent:"center",
     justifyContent:"center",
 
+    borderColor: "#999",
     borderWidth: 0.5,
-    borderBottomWidth: 4,
+    borderBottomWidth: 2,
+    
+    borderRadius: 5,
 
-    borderRadius: 10,
-    borderColor: "#748A96",
-
-    backgroundColor:"#C0E5FA",
-    borderTopRightRadius: 10,
-    borderBottomRightRadius: 10,
-
+    backgroundColor:"#025373",
   },
 });
  
