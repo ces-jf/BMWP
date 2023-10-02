@@ -21,7 +21,7 @@ import ScorePage from "./src/Pages/ScorePage";
 
 import Bmwp1983 from "./src/Pages/TypeBMWP/1983";
 import Bmwp1998 from "./src/Pages/TypeBMWP/1998";
-import Bmwp2000 from "./src/Pages/TypeBMWP/2000/Bmwp2000";
+import Bmwp2000 from "./src/Pages/TypeBMWP/2000";
 import Bmwp2018 from "./src/Pages/TypeBMWP/2018";
 
 //Navegação de telas, a partir dos botões

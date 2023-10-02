@@ -15,102 +15,102 @@ import ButtonsSelect from "../../../Components/BarButtons";
 import Span from "../../../Components/Span";
 
 export default function Bmwp2000() {
-    //SCORE10
-    const[taxonsScore10, setTaxonsScore10] = useState ([
-        {id: 1, name: Siphlonuridae, marked: false, color: "#fff" },
-        {id: 2, name: Gripopterygidae, marked: false, color: "#fff" },
-        {id: 3, name: Odontoceridae, marked: false, color: "#fff" },
-        {id: 4, name: Hydroscaphidae, marked: false, color: "#fff" },
-        {id: 5, name: Heliocopsychidae, marked: false, color: "#fff" },
-        {id: 6, name: Leptosphlebiidae, marked: false, color: "#fff" },
-    ])
+  // SCORE 10
+  const [pontuacao, setPonto] = useState(0);
+  const [taxonsScore10, setTaxonsScore10] = useState([
+    { id: 1, name: "Siphlonuridae", marked: false, color: "#fff" },
+    { id: 2, name: "Gripopterygidae", marked: false, color: "#fff" },
+    { id: 3, name: "Odontoceridae", marked: false, color: "#fff" },
+    { id: 4, name: "Hydroscaphidae", marked: false, color: "#fff" },
+    { id: 5, name: "Heliocopsychidae", marked: false, color: "#fff" },
+    { id: 6, name: "Leptosphlebiidae", marked: false, color: "#fff" },
+  ]);
 
+  //SCORE8
+  const [taxonsScore8, setTaxonsScore8] = useState([
+    { id: 1, name: "Perlidae", marked: false, color: "#fff" },
+    { id: 2, name: "Philopotamidae", marked: false, color: "#fff" },
+    { id: 3, name: "Psephenidae", marked: false, color: "#fff" },
+    { id: 4, name: "Microsporidae", marked: false, color: "#fff" },
+    { id: 5, name: "Pyralidae", marked: false, color: "#fff" },
+    { id: 6, name: "Noctuidae", marked: false, color: "#fff" },
+    { id: 7, name: "Calopterygidae", marked: false, color: "#fff" },
+    { id: 8, name: "Libellulidae", marked: false, color: "#fff" },
+    { id: 9, name: "Aeshnidae", marked: false, color: "#fff" },
+    { id: 10, name: "Hebridae", marked: false, color: "#fff" },
+    { id: 11, name: "Leptohyphidae", marked: false, color: "#fff" },
+  ]);
 
-    //SCORE8
-    const[taxonsScore8, setTaxonsscore8] = useState([
-        {id:1, name: Perlidae, marked: false, color: "#fff"},
-        {id:2, name: Philopotamidae, marked: false, color: "#fff"},
-        {id:3, name: Psephenidae, marked: false, color: "#fff"},
-        {id:4, name: Microsporidae, marked: false, color: "#fff"},
-        {id:5, name: Pyralidae, marked: false, color: "#fff"},
-        {id:6, name: Noctuidae, marked: false, color: "#fff"},
-        {id:7, name: Calopterygidae, marked: false, color: "#fff"},
-        {id:8, name: Libellulidae, marked: false, color: "#fff"},
-        {id:9, name: Aeshnidae, marked: false, color: "#fff"},
-        {id:10, name: Hebridae, marked: false, color: "#fff"},
-        {id:11, name: Leptohyphidae, marked: false, color: "#fff"},
-    ])
+  //SCORE7
+  const [taxonsScore7, setTaxonsScore7] = useState([
+    { id: 1, name: "Polycentropodidae", marked: false, color: "#fff" },
+    { id: 2, name: "Hydrobiosidae", marked: false, color: "#fff" },
+    { id: 3, name: 'Staphylinidae', marked: false, color: "#fff" },
+    { id: 4, name: 'Coenagrionidae', marked: false, color: "#fff" },
+    { id: 5, name: 'Veliidae', marked: false, color: "#fff" },
+    { id: 6, name: 'Glossosomatidae', marked: false, color: "#fff" },
+    { id: 7, name: 'Hydroptiliidae', marked: false, color: "#fff" },
+  ]);
 
-    //SCORE7
-    const[taxonsScore7, setTaxonsScore7] = useState([
-        {id:1, name: Polycentropodidae,  marked: false, color: "#fff"},
-        {id:2, name: Hydrobiosidae,  marked: false, color: "#fff"}, 
-        {id:3, name: Staphylinidae,  marked: false, color: "#fff"},
-        {id:4, name: Coenagrionidae,  marked: false, color: "#fff"},
-        {id:5, name: Veliidae,  marked: false, color: "#fff"},
-        {id:6, name: Glossosomatidae,  marked: false, color: "#fff"}, 
-        {id:7, name: Hydroptiliidae,  marked: false, color: "#fff"},
-    ])
+  //SCORE6
+  const [taxonsScore6, setTaxonsScore6] = useState([
+    { id: 1, name: 'Nepiade', marked: false, color: "#fff" },
+    { id: 2, name: 'Ancylidae', marked: false, color: "#fff" },
+    { id: 3, name: 'Unionidae', marked: false, color: "#fff" },
+    { id: 4, name: 'Dixidae', marked: false, color: "#fff" },
+    { id: 5, name: 'Hydropsychidae', marked: false, color: "#fff" },
+  ]);
+  //SCORE5
+  const [taxonsScore5, setTaxonsScore5] = useState([
+    { id: 1, name: 'Elmidae', marked: false, color: "#fff" },
+    { id: 2, name: 'Gomphidae', marked: false, color: "#fff" },
+    { id: 3, name: 'Naucoridae', marked: false, color: "#fff" },
+    { id: 4, name: 'Belostomatidae', marked: false, color: "#fff" },
+    { id: 5, name: 'Clorixidae', marked: false, color: "#fff" },
+    { id: 6, name: 'Mesoveliidae', marked: false, color: "#fff" },
+    { id: 7, name: 'Hydriphiliidae', marked: false, color: "#fff" },
+    { id: 8, name: 'Dugesiidae', marked: false, color: "#fff" },
+    { id: 9, name: 'Simuliidae', marked: false, color: "#fff" },
+    { id: 10, name: 'Tipulidae', marked: false, color: "#fff" },
+    { id: 11, name: 'Baetidae', marked: false, color: "#fff" },
+  ]);
+  //SCORE4
+  const [taxonsScore4, setTaxonsScore4] = useState([
+    { id: 1, name: 'Dysticidae', marked: false, color: "#fff" },
+    { id: 2, name: 'Chrysomelidae', marked: false, color: "#fff" },
+    { id: 3, name: 'Corydalidae', marked: false, color: "#fff" },
+    { id: 5, name: 'Psicocolidae', marked: false, color: "#fff" },
+    { id: 4, name: 'Ceratopogonidae', marked: false, color: "#fff" },
+    { id: 5, name: 'Empidoidea', marked: false, color: "#fff" },
+    { id: 6, name: 'CGelastocoridae', marked: false, color: "#fff" },
+  ]);
+  //SCORE3
+  const [taxonsScore3, setTaxonsScore3] = useState([
+    { id: 1, name: 'Physidae', marked: false, color: "#fff" },
+    { id: 2, name: 'Planorbidae', marked: false, color: "#fff" },
+    { id: 3, name: 'Sphariidae', marked: false, color: "#fff" },
+    { id: 4, name: 'Glossiphoniidae', marked: false, color: "#fff" },
+    { id: 5, name: 'Atharicdae', marked: false, color: "#fff" },
+    { id: 6, name: 'Tabanidae', marked: false, color: "#fff" },
+    { id: 7, name: 'Erpobdeliidae', marked: false, color: "#fff" },
+  ]);
 
-    //SCORE6
-    const[taxonsScore6, setTaxonsScore6] = useState([
-        {id:1, name: Nepiade, marked: false, color: "#fff"},
-        {id:2, name: Ancylidae, marked: false, color: "#fff"},
-        {id:3, name: Unionidae, marked: false, color: "#fff"},
-        {id:4, name: Dixidae, marked: false, color: "#fff"},
-        {id:5, name: Hydropsychidae, marked: false, color: "#fff"},
-    ])
-    //SCORE5
-    const[taxonsScore5, setTaxonsScore5] = useState([
-        {id: 1, name: Elmidae, marked: false, color: "#fff"},
-        {id: 2, name: Gomphidae, marked: false, color: "#fff"},
-        {id: 3, name: Naucoridae, marked: false, color: "#fff"},
-        {id:4, name: Belostomatidae, marked: false, color: "#fff"},
-        {id:5, name: Clorixidae, marked: false, color: "#fff"},
-        {id:6, name: Mesoveliidae, marked: false, color: "#fff"},
-        {id:7, name: Hydriphiliidae, marked: false, color: "#fff"},
-        {id:8, name: Dugesiidae, marked: false, color: "#fff"},
-        {id:9, name: Simuliidae, marked: false, color: "#fff"},
-        {id:10, name: Tipulidae, marked: false, color: "#fff"},
-        {id:11, name: Baetidae, marked: false, color: "#fff"},
-    ])
-    //SCORE4
-    const[taxonsScore4, setTaxonsScore4] = useState([
-    {id:1, name: Dysticidae, marked: false, color: "#fff"},
-    {id:2, name: Chrysomelidae, marked: false, color: "#fff"},
-    {id:3, name: Corydalidae, marked: false, color: "#fff"},
-    {id:5, name: Psicocolidae, marked: false, color: "#fff"},
-    {id:4, name: Ceratopogonidae, marked: false, color: "#fff"},
-    {id:5, name: Empidoidea, marked: false, color: "#fff"},
-    {id:6, name: CGelastocoridae, marked: false, color: "#fff"},
-    ])
-    //SCORE3
-    const[taxonsScore3, setTaxonsScore3] = useState([
-    {id:1, name: Physidae, marked: false, color: "#fff"},
-    {id:2, name: Planorbidae, marked: false, color: "#fff"},
-    {id:3, name: Sphariidae, marked: false, color: "#fff"},
-    {id:4, name: Glossiphoniidae, marked: false, color: "#fff"},
-    {id:5, name: Atharicdae, marked: false, color: "#fff"},
-    {id:6, name: Tabanidae, marked: false, color: "#fff"},
-    {id:7, name: Erpobdeliidae, marked: false, color: "#fff"}
-    ])
+  //SCORE2
+  const [taxonsScore2, setTaxonsScore2] = useState([
+    { id: 1, name: 'Chironomidae', marked: false, color: "#fff" },
+    { id: 2, name: 'Psychodidae', marked: false, color: "#fff" },
+    { id: 3, name: 'Stratiomyidae', marked: false, color: "#fff" },
+    { id: 4, name: 'Syrphidae', marked: false, color: "#fff" },
+    { id: 5, name: 'Ephirdae', marked: false, color: "#fff" },
+  ]);
+  //SCORE1
+  const [taxonsScore1, setTaxonsScore1] = useState([
+    { id: 1, name: 'Oligochaeta', marked: false, color: "#fff" },
+    { id: 2, name: 'Sciomyzidae', marked: false, color: "#fff" },
+    { id: 3, name: 'Culicidae', marked: false, color: "#fff" },
+  ]);
 
-    //SCORE2
-    const[taxonsScore2, setTaxonsScore2] = useState([
-    {id:1, name: Chironomidae, marked: false, color: "#fff"},
-    {id:2, name: Psychodidae, marked: false, color: '#fff'},
-    {id:3, name: Stratiomyidae, marked: false, color: '#fff'},
-    {id:4, name: Syrphidae, marked: false, color: '#fff'},
-    {id:5, name: Ephirdae, marked: false, color: '#fff'},
-    ])
-    //SCORE1
-    const[taxonsScore1, setTaxonsScore1] = useState([
-    {id:1, name: Oligochaeta, marked: false, color: '#fff'},
-    {id:2, name: Sciomyzidae, marked: false, color: '#fff'},
-    {id:3, name: Culicidae, marked: false, color: '#fff'},
-    ])
-
-    //Função para marcação de score
+  //Função para marcação de score
   const toggleMarked = (item, taxonScore, setScoreLocation, itemScoreValue) => {
     const updatedTaxons = taxonScore.map((taxon) => {
       if (taxon.id === item.id) {
@@ -129,8 +129,7 @@ export default function Bmwp2000() {
       setPonto(pontuacao - itemScoreValue);
     }
   };
-  const [pontuacao, setPonto] = useState(0);
-
+  
   return (
     <View style={styles.container}>
       <Bar>
@@ -468,8 +467,8 @@ export default function Bmwp2000() {
         <ButtonsSelect typeButton={"btnGo"} page={"ScorePage"}></ButtonsSelect>
       </Bar>
     </View>
-  )};
-
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -509,5 +508,3 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
   },
 });
-
-//testando
