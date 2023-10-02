@@ -22,6 +22,7 @@ import ScorePage from "./src/Pages/ScorePage";
 import Bmwp1983 from "./src/Pages/TypeBMWP/1983";
 import Bmwp1998 from "./src/Pages/TypeBMWP/1998";
 import Bmwp2000 from "./src/Pages/TypeBMWP/2000/Bmwp2000";
+import Bmwp2018 from "./src/Pages/TypeBMWP/2018";
 
 //Navegação de telas, a partir dos botões
 const Stack = createStackNavigator();
@@ -36,6 +37,7 @@ function MyStack() {
         <Stack.Screen name="Bmwp1983" component={Bmwp1983}/>
         <Stack.Screen name="Bmwp1998" component={Bmwp1998}/>
         <Stack.Screen name="Bmwp2000" component={Bmwp2000}/>
+        <Stack.Screen name="Bmwp2018" component={Bmwp2018}/>
 
 
         <Stack.Screen name="HelpPage" component={HelpPage} />
