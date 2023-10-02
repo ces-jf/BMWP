@@ -17,6 +17,7 @@ import Span from "../../../Components/Span";
 export default function Bmwp1998() {
 
 //SCORE 10
+  const [pontuacao, setPonto] = useState(0);
   const [taxonsScore10, setTaxonsScore10] = useState([
     { id: "1", name: "Siphlonuridae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
   { id: "2", name: "Gripopterygidae", marked: false, color: "#fff", image: require("./../../../../assets/warn.png") },
@@ -134,7 +135,7 @@ export default function Bmwp1998() {
       setPonto(pontuacao - itemScoreValue);
     }
   }
-  const [pontuacao, setPonto] = useState(0);
+
 
   return (
     <View style={styles.container}>

@@ -14,9 +14,7 @@ import TitlePompiere from "../../../Components/Text/Title";
 import ButtonsSelect from "../../../Components/BarButtons";
 import Span from "../../../Components/Span";
 
-export default function Bmwp1983() {
-
-  
+export default function Bmwp1983() {  
   //SCORE 10
   const [taxonsScore10, setTaxonsScore10] = useState([
     { id: "1", name: "Slphlonuridae", marked: false, color: "#fff" },
@@ -147,6 +145,8 @@ export default function Bmwp1983() {
       return taxon;
     });
 
+    const [pontuacao, setPonto] = useState(0);
+
     setScoreLocation(updatedTaxons);
 
     if (item.marked === false) {
@@ -155,7 +155,7 @@ export default function Bmwp1983() {
       setPonto(pontuacao - itemScoreValue);
     }
   };
-  const [pontuacao, setPonto] = useState(0);
+  
 
   return (
     <View style={styles.container}>
